@@ -17,6 +17,8 @@
 		CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6BA266F8D81001AE431 /* LaunchScreen.storyboard */; };
 		CAF4A6C7266F8D82001AE431 /* MyTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6C6266F8D82001AE431 /* MyTweetsTests.swift */; };
 		CAF4A6D2266F8D82001AE431 /* MyTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6D1266F8D82001AE431 /* MyTweetsUITests.swift */; };
+		CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6EF266F92F0001AE431 /* Coordinator.swift */; };
+		CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		CAF4A6CD266F8D82001AE431 /* MyTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6D1266F8D82001AE431 /* MyTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTweetsUITests.swift; sourceTree = "<group>"; };
 		CAF4A6D3266F8D82001AE431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF4A6EF266F92F0001AE431 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		CAF4A6AE266F8D80001AE431 /* MyTweets */ = {
 			isa = PBXGroup;
 			children = (
+				CAF4A6EE266F91B4001AE431 /* Coordinator */,
 				CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */,
 				CAF4A6B1266F8D80001AE431 /* SceneDelegate.swift */,
 				CAF4A6B3266F8D80001AE431 /* ViewController.swift */,
@@ -140,6 +145,15 @@
 				CAF4A6D3266F8D82001AE431 /* Info.plist */,
 			);
 			path = MyTweetsUITests;
+			sourceTree = "<group>";
+		};
+		CAF4A6EE266F91B4001AE431 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CAF4A6EF266F92F0001AE431 /* Coordinator.swift */,
+				CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D54418462F4FB9C1CC2D8D4A /* Pods */ = {
