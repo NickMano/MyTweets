@@ -17,7 +17,20 @@ class MainCoordinator: Coordinator {
 
     func start() {
         let vc = WelcomeViewController()
+        vc.coordinator = self
         navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func login() {
+        let vc = LoginViewController()
+        navigationController.isNavigationBarHidden = false
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension MainCoordinator {
+    func setWelcomeNavSyle() {
+        navigationController.isNavigationBarHidden = true
     }
 }

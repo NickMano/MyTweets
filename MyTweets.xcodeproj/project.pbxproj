@@ -11,6 +11,7 @@
 		7CAA272DB98C966A460D26FC /* Pods_MyTweets_MyTweetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */; };
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
+		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4A8A6C267664EF0058FA7E /* Welcome */,
+				CA8B50F326782C4B00978109 /* Login */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +121,14 @@
 				CA4A8A70267665640058FA7E /* WelcomeView.xib */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		CA8B50F326782C4B00978109 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CA8B50F426782C6000978109 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CAF4A6A3266F8D80001AE431 = {
@@ -444,6 +455,7 @@
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
 				CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
+				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
