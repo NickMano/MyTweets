@@ -93,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA4A8A6A267663CF0058FA7E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */,
+				CAF4A6B8266F8D81001AE431 /* Assets.xcassets */,
+				CAF4A6BA266F8D81001AE431 /* LaunchScreen.storyboard */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		CA4A8A6B267664E30058FA7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,11 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				CA4A8A6B267664E30058FA7E /* Views */,
+				CA4A8A6A267663CF0058FA7E /* Commons */,
 				CAF4A6EE266F91B4001AE431 /* Coordinator */,
-				CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */,
-				CAF4A6B3266F8D80001AE431 /* ViewController.swift */,
-				CAF4A6B8266F8D81001AE431 /* Assets.xcassets */,
-				CAF4A6BA266F8D81001AE431 /* LaunchScreen.storyboard */,
 				CAF4A6BD266F8D81001AE431 /* Info.plist */,
 			);
 			path = MyTweets;
