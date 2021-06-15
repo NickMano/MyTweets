@@ -16,7 +16,8 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = ViewController()
+        let vc = WelcomeViewController()
+        navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: false)
     }
 }

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="MyTweets" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="LOq-p2-pRt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xau-ks-bfA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLN-5L-yUq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="My Tweets" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M53-QL-9Cu">
+                    <rect key="frame" x="24" y="306" width="366" height="44.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="The biggest community of iOS Developers" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-hE-WjB">
+                    <rect key="frame" x="24" y="354.5" width="366" height="25.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyW-2F-NLj">
+                    <rect key="frame" x="40" y="702" width="334" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fUP-ss-rOj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0r-hY-SHk">
+                    <rect key="frame" x="40" y="782" width="334" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="RS7-1B-z1L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Register">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qLN-5L-yUq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7go-5e-Yei"/>
+                <constraint firstItem="UyW-2F-NLj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="EiR-vN-aIN"/>
+                <constraint firstItem="qLN-5L-yUq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HrK-27-w5D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UyW-2F-NLj" secondAttribute="trailing" constant="40" id="Jif-zB-1Ki"/>
+                <constraint firstItem="qLN-5L-yUq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KDE-Xq-IEY"/>
+                <constraint firstAttribute="bottom" secondItem="qLN-5L-yUq" secondAttribute="bottom" id="L15-li-qus"/>
+                <constraint firstItem="xau-ks-bfA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Lbx-UF-2mQ"/>
+                <constraint firstItem="xau-ks-bfA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MNq-rL-aJO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e0r-hY-SHk" secondAttribute="bottom" constant="40" id="NKt-gX-zWw"/>
+                <constraint firstItem="M53-QL-9Cu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="OMQ-Jq-WVZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M53-QL-9Cu" secondAttribute="trailing" constant="24" id="Oxm-HL-laX"/>
+                <constraint firstItem="e0r-hY-SHk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Tzc-9T-haM"/>
+                <constraint firstItem="xau-ks-bfA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XlF-sb-uB1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e0r-hY-SHk" secondAttribute="trailing" constant="40" id="YRa-np-Sgb"/>
+                <constraint firstItem="e3K-hE-WjB" firstAttribute="top" secondItem="M53-QL-9Cu" secondAttribute="bottom" constant="4" id="ZxT-VO-6AK"/>
+                <constraint firstItem="M53-QL-9Cu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-120" id="bXa-1o-M1L"/>
+                <constraint firstItem="e0r-hY-SHk" firstAttribute="top" secondItem="UyW-2F-NLj" secondAttribute="bottom" constant="40" id="dJY-PU-1pU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e3K-hE-WjB" secondAttribute="trailing" constant="24" id="o0B-jb-VXd"/>
+                <constraint firstAttribute="bottom" secondItem="xau-ks-bfA" secondAttribute="bottom" id="qHx-Ms-VYr"/>
+                <constraint firstItem="e3K-hE-WjB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="zhm-1E-JLl"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="123.88392857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="loginBackground" width="640" height="425"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
