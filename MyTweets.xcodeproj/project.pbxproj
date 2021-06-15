@@ -11,7 +11,7 @@
 		7CAA272DB98C966A460D26FC /* Pods_MyTweets_MyTweetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */; };
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
-		CAF4A6B2266F8D80001AE431 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B1266F8D80001AE431 /* SceneDelegate.swift */; };
+		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B4266F8D80001AE431 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* ViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
 		CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6BA266F8D81001AE431 /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAF4A6B1266F8D80001AE431 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAF4A6B8266F8D81001AE431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAF4A6BB266F8D81001AE431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 			children = (
 				CAF4A6EE266F91B4001AE431 /* Coordinator */,
 				CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */,
-				CAF4A6B1266F8D80001AE431 /* SceneDelegate.swift */,
 				CAF4A6B3266F8D80001AE431 /* ViewController.swift */,
 				CAF4A6B8266F8D81001AE431 /* Assets.xcassets */,
 				CAF4A6BA266F8D81001AE431 /* LaunchScreen.storyboard */,
@@ -420,7 +419,6 @@
 				CAF4A6B4266F8D80001AE431 /* ViewController.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
-				CAF4A6B2266F8D80001AE431 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
