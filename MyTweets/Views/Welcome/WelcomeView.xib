@@ -25,26 +25,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="My Tweets" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M53-QL-9Cu">
-                    <rect key="frame" x="24" y="306" width="366" height="44.5"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" notEnabled="YES"/>
-                    </accessibility>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-eI-Q2w">
+                    <rect key="frame" x="116.5" y="266.5" width="181" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="The biggest community of iOS Developers" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-hE-WjB">
-                    <rect key="frame" x="24" y="354.5" width="366" height="25.5"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" notEnabled="YES"/>
-                    </accessibility>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The biggest community of iOS Developers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-Wy-hAv">
+                    <rect key="frame" x="40" y="313.5" width="334" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyW-2F-NLj">
                     <rect key="frame" x="40" y="702" width="334" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,6 +47,9 @@
                     <state key="normal" title="Login">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="LoginButtonPressed:" destination="-1" eventType="touchUpInside" id="joz-zi-Vw9"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0r-hY-SHk">
                     <rect key="frame" x="40" y="782" width="334" height="40"/>
@@ -79,17 +74,17 @@
                 <constraint firstItem="xau-ks-bfA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Lbx-UF-2mQ"/>
                 <constraint firstItem="xau-ks-bfA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MNq-rL-aJO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e0r-hY-SHk" secondAttribute="bottom" constant="40" id="NKt-gX-zWw"/>
-                <constraint firstItem="M53-QL-9Cu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="OMQ-Jq-WVZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M53-QL-9Cu" secondAttribute="trailing" constant="24" id="Oxm-HL-laX"/>
+                <constraint firstItem="UAr-eI-Q2w" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QKJ-TQ-5KA"/>
+                <constraint firstItem="qLN-5L-yUq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QMG-Fc-fVj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7JQ-Wy-hAv" secondAttribute="trailing" constant="40" id="TJG-yy-xK1"/>
                 <constraint firstItem="e0r-hY-SHk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Tzc-9T-haM"/>
                 <constraint firstItem="xau-ks-bfA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XlF-sb-uB1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e0r-hY-SHk" secondAttribute="trailing" constant="40" id="YRa-np-Sgb"/>
-                <constraint firstItem="e3K-hE-WjB" firstAttribute="top" secondItem="M53-QL-9Cu" secondAttribute="bottom" constant="4" id="ZxT-VO-6AK"/>
-                <constraint firstItem="M53-QL-9Cu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-120" id="bXa-1o-M1L"/>
                 <constraint firstItem="e0r-hY-SHk" firstAttribute="top" secondItem="UyW-2F-NLj" secondAttribute="bottom" constant="40" id="dJY-PU-1pU"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e3K-hE-WjB" secondAttribute="trailing" constant="24" id="o0B-jb-VXd"/>
+                <constraint firstItem="7JQ-Wy-hAv" firstAttribute="top" secondItem="UAr-eI-Q2w" secondAttribute="bottom" constant="4" id="pEA-C9-CsT"/>
                 <constraint firstAttribute="bottom" secondItem="xau-ks-bfA" secondAttribute="bottom" id="qHx-Ms-VYr"/>
-                <constraint firstItem="e3K-hE-WjB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="zhm-1E-JLl"/>
+                <constraint firstItem="UAr-eI-Q2w" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-160" id="yzi-4t-MNh"/>
+                <constraint firstItem="7JQ-Wy-hAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="zcZ-0L-gZ1"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="123.88392857142857"/>
         </view>
