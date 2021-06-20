@@ -12,6 +12,7 @@
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
 		CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */; };
 		CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */; };
+		CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADCF267FE96100AC3B29 /* LoginView.swift */; };
 		CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADD5267FEA8F00AC3B29 /* NibView.swift */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
 		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
@@ -55,6 +56,7 @@
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		CA2FADCF267FE96100AC3B29 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CA2FADD5267FEA8F00AC3B29 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				CA8B50F426782C6000978109 /* LoginViewController.swift */,
 				CA8882C526783F9000784928 /* LoginView.xib */,
+				CA2FADCF267FE96100AC3B29 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
+				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
 				CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */,
