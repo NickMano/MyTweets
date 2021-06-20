@@ -71,6 +71,7 @@ final class LoginViewController: UIViewController {
             return
         }
         
+        // A valid user is email: test@test.com password: qwerty
         let request = LoginRequest(email: email, password: password)
         
         SVProgressHUD.show()
