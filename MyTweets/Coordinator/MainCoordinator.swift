@@ -24,6 +24,7 @@ class MainCoordinator: Coordinator {
     
     func login() {
         let vc = LoginViewController()
+        vc.title = "Login"
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
