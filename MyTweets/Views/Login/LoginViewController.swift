@@ -6,6 +6,8 @@
 //
 
 import NotificationBannerSwift
+import SVProgressHUD
+import Simple_Networking
 import UIKit
 
 final class LoginViewController: UIViewController {
@@ -40,24 +42,52 @@ final class LoginViewController: UIViewController {
         loginView.setLoginButtonAction(#selector(performLogin), viewController: self)
     }
     
+    private func isFormValid() -> Bool {
+        guard let email = loginView.getEmailValue(), let pass = loginView.getPasswordValue() else {
+            FormNotification.generic.showError()
+            return false
+        }
+        
+        if email.isEmpty && pass.isEmpty {
+            FormNotification.allFields.showError()
+            return false
+        }
+        
+        if email.isEmpty || pass.isEmpty {
+            FormNotification.someField.showError()
+            return false
+        }
+        
+        return true
+    }
+    
     // MARK: - Actions
     @objc private func performLogin() {
-        guard let userName = loginView.getEmailValue(), let pass = loginView.getPasswordValue() else {
-            FormNotification.generic.showError()
+        if !isFormValid() {
             return
         }
         
-        if userName.isEmpty && pass.isEmpty {
-            FormNotification.allFields.showError()
+        guard let email = loginView.getEmailValue(), let password = loginView.getPasswordValue() else {
             return
         }
         
-        if userName.isEmpty || pass.isEmpty {
-            FormNotification.someField.showError()
-            return
-        }
+        let request = LoginRequest(email: email, password: password)
         
-        // TODO: Perform login
+        SVProgressHUD.show()
+        
+        SN.post(endpoint: Endpoint.login, model: request) { (response: SNResultWithEntity<LoginResponse, ErrorResponse>) in
+            SVProgressHUD.dismiss()
+            
+            switch response {
+            case .errorResult(let error):
+                NotificationBanner(subtitle: error.error, style: .danger).show()
+            case .error(_):
+                FormNotification.generic.showError()
+            case .success(let user):
+                NotificationBanner(subtitle: "Welcome \(user.user.names)", style: .success).show()
+                // TODO: Show home view
+            }
+        }
     }
 }
 
@@ -70,7 +100,7 @@ enum FormNotification {
         switch self {
         case .generic:
             NotificationBanner(title: "Error",
-                               subtitle: "An error was occured",
+                               subtitle: "An error was occurred",
                                style: .danger).show()
         case .someField:
             NotificationBanner(title: "Error",
