@@ -8,8 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="MyTweets" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView" customModule="MyTweets" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="dF1-Nq-zS6" id="muU-a8-VoI"/>
+                <outlet property="passwordTextField" destination="b8U-HR-75H" id="OR6-N3-dUm"/>
+                <outlet property="signUpButton" destination="Vkx-i1-Jcp" id="cKp-fW-465"/>
+                <outlet property="userNameTextField" destination="C8V-CX-Uh1" id="3b7-60-P1f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CmY-1V-6iV"/>
             </connections>
         </placeholder>
@@ -22,20 +26,25 @@
                     <rect key="frame" x="0.0" y="773" width="414" height="123"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-cN-hb1">
-                    <rect key="frame" x="40" y="364" width="334" height="168"/>
+                    <rect key="frame" x="40" y="331" width="334" height="234"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-Nq-zS6">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-Nq-zS6" userLabel="Email">
                             <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-HR-75H">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8V-CX-Uh1">
                             <rect key="frame" x="0.0" y="66" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="username"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-HR-75H">
+                            <rect key="frame" x="0.0" y="132" width="334" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="password"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-i1-Jcp">
-                            <rect key="frame" x="0.0" y="132" width="334" height="36"/>
+                            <rect key="frame" x="0.0" y="198" width="334" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Sign Up">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
