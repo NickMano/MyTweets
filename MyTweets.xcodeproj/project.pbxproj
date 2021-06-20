@@ -11,6 +11,7 @@
 		7CAA272DB98C966A460D26FC /* Pods_MyTweets_MyTweetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */; };
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
+		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
 		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
@@ -50,6 +51,7 @@
 		C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8B50F426782C6000978109 /* LoginViewController.swift */,
+				CA8882C526783F9000784928 /* LoginView.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */,
 				CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */,
+				CA8882C626783F9000784928 /* LoginView.xib in Resources */,
 				CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
