@@ -8,23 +8,29 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-    @IBAction func LoginButtonPressed(_ sender: Any) {
-        coordinator?.login()
-    }
+    // MARK: - Public properties
+    weak var coordinator: MainCoordinator?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
-    
-    weak var coordinator: MainCoordinator?
 
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         coordinator?.setWelcomeNavSyle()
+    }
+    
+    // MARK: - Actions
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        coordinator?.login()
+    }
+    
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        coordinator?.register()
     }
 }
 

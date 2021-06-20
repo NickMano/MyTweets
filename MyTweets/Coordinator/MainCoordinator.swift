@@ -28,6 +28,13 @@ class MainCoordinator: Coordinator {
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func register() {
+        let vc = RegisterViewController()
+        vc.title = "Sign Up"
+        navigationController.isNavigationBarHidden = false
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 extension MainCoordinator {

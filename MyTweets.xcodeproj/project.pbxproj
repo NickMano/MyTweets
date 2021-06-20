@@ -10,6 +10,8 @@
 		32F985EB0CD78B83D737267A /* Pods_MyTweetsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E44709F3227E866D02A437 /* Pods_MyTweetsTests.framework */; };
 		7CAA272DB98C966A460D26FC /* Pods_MyTweets_MyTweetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */; };
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
+		CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */; };
+		CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
 		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
 		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
@@ -50,6 +52,8 @@
 		974036769E0C6422DF4BC99B /* Pods-MyTweets-MyTweetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTweets-MyTweetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyTweets-MyTweetsUITests/Pods-MyTweets-MyTweetsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2FADB8267F7B1000AC3B29 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */,
+				CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		CA4A8A6A267663CF0058FA7E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 			children = (
 				CA4A8A6C267664EF0058FA7E /* Welcome */,
 				CA8B50F326782C4B00978109 /* Login */,
+				CA2FADB8267F7B1000AC3B29 /* Register */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */,
+				CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */,
 				CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */,
 				CA8882C626783F9000784928 /* LoginView.xib in Resources */,
 				CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */,
@@ -459,6 +474,7 @@
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
 				CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
+				CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */,
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
 			);
