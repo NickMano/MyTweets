@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     // MARK: - Public propertie
     weak var coordinatior: MainCoordinator?
 }

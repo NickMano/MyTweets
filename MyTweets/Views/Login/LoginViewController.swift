@@ -7,6 +7,6 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     weak var coordinatior: MainCoordinator?
 }

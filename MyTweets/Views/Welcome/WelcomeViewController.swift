@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     // MARK: - Public properties
     weak var coordinator: MainCoordinator?
     
