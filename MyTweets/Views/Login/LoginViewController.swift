@@ -42,7 +42,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func performLogin() {
-        guard let userName = loginView.getUserNameValue(), let pass = loginView.getPasswordValue() else {
+        guard let userName = loginView.getEmailValue(), let pass = loginView.getPasswordValue() else {
             FormNotification.generic.showError()
             return
         }
