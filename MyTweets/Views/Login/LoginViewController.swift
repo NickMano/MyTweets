@@ -85,7 +85,7 @@ final class LoginViewController: UIViewController {
             case .error(_):
                 FormNotification.generic.showError()
             case .success(let user):
-                // TODO: Save user
+                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
                 self?.coordinator?.home()
             }
         }
