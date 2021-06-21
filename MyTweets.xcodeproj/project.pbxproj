@@ -163,6 +163,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CA2FAE5C2680B70100AC3B29 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CA4A8A6A267663CF0058FA7E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,11 +238,12 @@
 		CAF4A6AE266F8D80001AE431 /* MyTweets */ = {
 			isa = PBXGroup;
 			children = (
-				CA4A8A6B267664E30058FA7E /* Views */,
 				CA4A8A6A267663CF0058FA7E /* Commons */,
+				CA2FAE5C2680B70100AC3B29 /* Components */,
 				CAF4A6EE266F91B4001AE431 /* Coordinator */,
-				CAF4A6BD266F8D81001AE431 /* Info.plist */,
 				CA2FADD4267FEA6100AC3B29 /* Helpers */,
+				CA4A8A6B267664E30058FA7E /* Views */,
+				CAF4A6BD266F8D81001AE431 /* Info.plist */,
 			);
 			path = MyTweets;
 			sourceTree = "<group>";
