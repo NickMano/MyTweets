@@ -15,11 +15,10 @@ final class TweetCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tweeetImageView: UIImageView!
     @IBOutlet weak var videoButton: UIButton!
-    @IBOutlet weak var dateLabel: UILabel!
     
     func configureWith(_ post: Post) {
         nameLabel.text = post.author.names
-        userNameLabel.text = post.author.nickname
+        userNameLabel.text = "\(post.author.nickname) · \(post.createdAt)"
         messageLabel.text = post.text
         
         if post.hasImage {
@@ -33,7 +32,5 @@ final class TweetCell: UITableViewCell {
         } else {
             videoButton.isHidden = true
         }
-        
-        dateLabel.text = post.createdAt
     }
 }
