@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyTweets" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="WDh-ig-AEi" id="94Q-8W-jJL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Xch-nS-Ig8"/>
             </connections>
         </placeholder>
@@ -17,9 +18,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDh-ig-AEi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="139" y="94"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WDh-ig-AEi" secondAttribute="trailing" id="8zf-F1-1eY"/>
+                <constraint firstItem="WDh-ig-AEi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HA5-tJ-aVE"/>
+                <constraint firstItem="WDh-ig-AEi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uk6-Cg-AcZ"/>
+                <constraint firstAttribute="bottom" secondItem="WDh-ig-AEi" secondAttribute="bottom" id="UuK-Go-6k0"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </view>
     </objects>
     <resources>

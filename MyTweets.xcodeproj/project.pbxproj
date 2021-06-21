@@ -28,6 +28,8 @@
 		CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE632680BD2200AC3B29 /* TweetCell.swift */; };
 		CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE692680BF0800AC3B29 /* Post.swift */; };
 		CA2FAE732680C38900AC3B29 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE722680C38900AC3B29 /* UITableViewCell.swift */; };
+		CA2FAE7B2680C74800AC3B29 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */; };
+		CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
 		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
 		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
@@ -86,6 +88,8 @@
 		CA2FAE632680BD2200AC3B29 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		CA2FAE692680BF0800AC3B29 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CA2FAE722680C38900AC3B29 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
+		CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			children = (
 				CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */,
 				CA2FAE2A2680126C00AC3B29 /* HomeView.xib */,
+				CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */,
+				CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2FADFD2680018F00AC3B29 /* User.swift in Sources */,
+				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
 				CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */,
@@ -586,6 +593,7 @@
 				CA2FADF72680014E00AC3B29 /* UserResponse.swift in Sources */,
 				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
 				CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */,
+				CA2FAE7B2680C74800AC3B29 /* PostDataSource.swift in Sources */,
 				CA2FADE72680001500AC3B29 /* Endpoint.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */,
