@@ -24,6 +24,9 @@
 		CA2FAE2626800FF500AC3B29 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */; };
 		CA2FAE2B2680126C00AC3B29 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAE2A2680126C00AC3B29 /* HomeView.xib */; };
 		CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */; };
+		CA2FAE5F2680B88800AC3B29 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAE5E2680B88800AC3B29 /* TweetCell.xib */; };
+		CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE632680BD2200AC3B29 /* TweetCell.swift */; };
+		CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE692680BF0800AC3B29 /* Post.swift */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
 		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
 		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
@@ -78,6 +81,9 @@
 		CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CA2FAE2A2680126C00AC3B29 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		CA2FAE5E2680B88800AC3B29 /* TweetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
+		CA2FAE632680BD2200AC3B29 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		CA2FAE692680BF0800AC3B29 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -156,9 +162,9 @@
 		CA2FADFB2680018300AC3B29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FADF62680014E00AC3B29 /* UserResponse.swift */,
-				CA2FADFC2680018F00AC3B29 /* User.swift */,
+				CA2FAE682680BEE800AC3B29 /* User */,
 				CA2FAE04268001C100AC3B29 /* ErrorResponse.swift */,
+				CA2FAE692680BF0800AC3B29 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,8 +172,27 @@
 		CA2FAE5C2680B70100AC3B29 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA2FAE5D2680B86A00AC3B29 /* TweetCell */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CA2FAE5D2680B86A00AC3B29 /* TweetCell */ = {
+			isa = PBXGroup;
+			children = (
+				CA2FAE5E2680B88800AC3B29 /* TweetCell.xib */,
+				CA2FAE632680BD2200AC3B29 /* TweetCell.swift */,
+			);
+			path = TweetCell;
+			sourceTree = "<group>";
+		};
+		CA2FAE682680BEE800AC3B29 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CA2FADFC2680018F00AC3B29 /* User.swift */,
+				CA2FADF62680014E00AC3B29 /* UserResponse.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		CA4A8A6A267663CF0058FA7E /* Commons */ = {
@@ -410,6 +435,7 @@
 				CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */,
 				CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */,
 				CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */,
+				CA2FAE5F2680B88800AC3B29 /* TweetCell.xib in Resources */,
 				CA8882C626783F9000784928 /* LoginView.xib in Resources */,
 				CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */,
 				CA2FAE2B2680126C00AC3B29 /* HomeView.xib in Resources */,
@@ -543,6 +569,7 @@
 				CA2FADFD2680018F00AC3B29 /* User.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
+				CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */,
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
 				CA2FADF72680014E00AC3B29 /* UserResponse.swift in Sources */,
 				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
@@ -555,6 +582,7 @@
 				CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */,
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
+				CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */,
 				CA2FADF22680011600AC3B29 /* LoginRequest.swift in Sources */,
 				CA2FAE05268001C100AC3B29 /* ErrorResponse.swift in Sources */,
 			);
