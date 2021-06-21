@@ -20,6 +20,7 @@
 		CA2FADF72680014E00AC3B29 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADF62680014E00AC3B29 /* UserResponse.swift */; };
 		CA2FADFD2680018F00AC3B29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADFC2680018F00AC3B29 /* User.swift */; };
 		CA2FAE05268001C100AC3B29 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE04268001C100AC3B29 /* ErrorResponse.swift */; };
+		CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
 		CA8882C626783F9000784928 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8882C526783F9000784928 /* LoginView.xib */; };
 		CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B50F426782C6000978109 /* LoginViewController.swift */; };
@@ -70,6 +71,7 @@
 		CA2FADF62680014E00AC3B29 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		CA2FADFC2680018F00AC3B29 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA2FAE04268001C100AC3B29 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		CA8882C526783F9000784928 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		CA8B50F426782C6000978109 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */,
 				CA2FADDD267FF98700AC3B29 /* RegisterView.swift */,
 				CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */,
+				CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */,
 				CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */,
+				CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */,
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
 				CA2FADF22680011600AC3B29 /* LoginRequest.swift in Sources */,

@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     private let loginView: LoginViewProtocol
     
     // MARK: - Public properties
-    weak var coordinatior: MainCoordinator?
+    weak var coordinator: MainCoordinator?
     
     // MARK: - Initializer
     init(view: LoginViewProtocol = LoginView()) {
@@ -76,7 +76,7 @@ final class LoginViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        SN.post(endpoint: Endpoint.login, model: request) { (response: SNResultWithEntity<LoginResponse, ErrorResponse>) in
+        SN.post(endpoint: Endpoint.login, model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
             SVProgressHUD.dismiss()
             
             switch response {
@@ -85,8 +85,8 @@ final class LoginViewController: UIViewController {
             case .error(_):
                 FormNotification.generic.showError()
             case .success(let user):
-                NotificationBanner(subtitle: "Welcome \(user.user.names)", style: .success).show()
-                // TODO: Show home view
+                // TODO: Save user
+                self?.coordinator?.home()
             }
         }
     }

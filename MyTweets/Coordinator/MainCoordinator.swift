@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+final class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
@@ -24,6 +24,7 @@ class MainCoordinator: Coordinator {
     
     func login() {
         let vc = LoginViewController()
+        vc.coordinator = self
         vc.title = "Login"
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
@@ -31,9 +32,13 @@ class MainCoordinator: Coordinator {
     
     func register() {
         let vc = RegisterViewController()
+        vc.coordinator = self
         vc.title = "Sign Up"
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func home() {
     }
 }
 
