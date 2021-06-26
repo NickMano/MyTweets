@@ -79,13 +79,14 @@ final class RegisterViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        SN.post(endpoint: Endpoint.register, model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
+        SN.post(endpoint: Endpoint.register,
+                model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
             SVProgressHUD.dismiss()
             
             switch response {
             case .errorResult(let error):
                 NotificationBanner(subtitle: error.error, style: .danger).show()
-            case .error(_):
+            case .error:
                 FormNotification.generic.showError()
             case .success(let user):
                 SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)

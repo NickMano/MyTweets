@@ -58,4 +58,3 @@ class NibView: UIView {
         return view
     }
 }
-

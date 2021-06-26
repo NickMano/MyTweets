@@ -26,6 +26,4 @@ final class PostDataSource: NSObject, UITableViewDataSource {
         
         return tweetCell
     }
-    
-    
 }

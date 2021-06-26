@@ -353,6 +353,7 @@
 				CAF4A6A9266F8D80001AE431 /* Frameworks */,
 				CAF4A6AA266F8D80001AE431 /* Resources */,
 				B5EB04A8ED49B8393700DF4C /* [CP] Embed Pods Frameworks */,
+				CA973D402687F4A7001FFCA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -575,6 +576,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTweets/Pods-MyTweets-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA973D402687F4A7001FFCA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

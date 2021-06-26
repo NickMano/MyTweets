@@ -33,4 +33,3 @@ final class WelcomeViewController: UIViewController {
         coordinator?.register()
     }
 }
-

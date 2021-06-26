@@ -52,7 +52,7 @@ final class LoginViewController: UIViewController {
             FormNotification.allFields.showError()
             return false
         }
-        
+
         if email.isEmpty || pass.isEmpty {
             FormNotification.someField.showError()
             return false
@@ -60,14 +60,12 @@ final class LoginViewController: UIViewController {
         
         return true
     }
-    
+
     // MARK: - Actions
     @objc private func performLogin() {
-        if !isFormValid() {
-            return
-        }
-        
-        guard let email = loginView.getEmailValue(), let password = loginView.getPasswordValue() else {
+        guard !isFormValid(),
+              let email = loginView.getEmailValue(),
+              let password = loginView.getPasswordValue() else {
             return
         }
         
@@ -75,14 +73,16 @@ final class LoginViewController: UIViewController {
         let request = LoginRequest(email: email, password: password)
         
         SVProgressHUD.show()
-        
-        SN.post(endpoint: Endpoint.login, model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
+
+        SN.post(endpoint: Endpoint.login,
+                model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
+            
             SVProgressHUD.dismiss()
             
             switch response {
             case .errorResult(let error):
                 NotificationBanner(subtitle: error.error, style: .danger).show()
-            case .error(_):
+            case .error:
                 FormNotification.generic.showError()
             case .success(let user):
                 SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)

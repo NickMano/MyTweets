@@ -1,0 +1,14 @@
+disabled_rules:
+  - trailing_whitespace
+  - identifier_name
+  - force_cast
+
+opt_in_rules:
+  - empty_count
+  - empty_string
+
+excluded:
+  - Pods
+  - SwiftLint/Common/3rdPartyLib
+
+reporter: "xcode"
