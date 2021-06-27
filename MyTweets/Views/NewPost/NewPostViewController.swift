@@ -5,17 +5,22 @@
 //  Created by Nicolas Manograsso on 26/06/2021.
 //
 
+import NotificationBannerSwift
+import SVProgressHUD
 import UIKit
 
 final class NewPostViewController: UIViewController {
     // MARK: - Private properties
+    private let viewModel: NewPostViewModelProtocol
     private let newPostView: NewPostViewProtocol
     
     // MARK: - Public properties
     weak var coordinator: HomeCoordinator?
     
     // MARK: - Initializers
-    init(view: NewPostViewProtocol = NewPostView()) {
+    init(viewModel: NewPostViewModelProtocol = NewPostViewModel(),
+         view: NewPostViewProtocol = NewPostView()) {
+        self.viewModel = viewModel
         newPostView = view
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,21 +37,34 @@ final class NewPostViewController: UIViewController {
     override func loadView() {
         view = newPostView
     }
-    
+}
+
+private extension NewPostViewController {
     // MARK: - Private methods
-    private func configureButtons() {
+    func configureButtons() {
         newPostView.addButtonAction(#selector(cancelAction), for: .cancel, from: self)
         newPostView.addButtonAction(#selector(postAction), for: .post, from: self)
+    }
+    
+    func errorPost(_ message: String) {
+        SVProgressHUD.dismiss()
+        NotificationBanner(subtitle: message, style: .danger).show()
+    }
+    
+    func hasPost(_ post: Post) {
+        SVProgressHUD.dismiss()
+        coordinator?.finishPost(post)
     }
 }
 
 @objc private extension NewPostViewController {
     // MARK: - Actions
     private func cancelAction() {
-        coordinator?.cancelPost()
+        coordinator?.finishPost()
     }
     
     private func postAction() {
-        // TODO: post text to server4
+        SVProgressHUD.show()
+        viewModel.savePost(newPostView.getPostText(), errorAction: errorPost(_:), succesfulAction: hasPost(_:))
     }
 }

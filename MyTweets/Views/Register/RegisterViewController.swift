@@ -6,8 +6,8 @@
 //
 
 import NotificationBannerSwift
-import SVProgressHUD
 import Simple_Networking
+import SVProgressHUD
 import UIKit
 
 final class RegisterViewController: UIViewController {

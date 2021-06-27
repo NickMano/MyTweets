@@ -30,7 +30,14 @@ final class HomeCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
-    func cancelPost() {
+    func finishPost(_ post: Post? = nil) {
+        guard let post = post,
+              let vc = navigationController.viewControllers.first as? HomeViewController else {
+            navigationController.dismiss(animated: true)
+            return
+        }
+        
+        vc.updateDataWith(post)
         navigationController.dismiss(animated: true)
     }
 }

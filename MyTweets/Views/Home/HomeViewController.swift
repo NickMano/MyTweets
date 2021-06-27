@@ -5,8 +5,8 @@
 //  Created by Nicolas Manograsso on 20/06/2021.
 //
 
-import UIKit
 import SVProgressHUD
+import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: - Public properties
@@ -42,6 +42,13 @@ final class HomeViewController: UIViewController {
         view = homeView
     }
     
+    // MARK: - Public methods
+    func updateDataWith(_ post: Post) {
+        viewModel.addPost(post)
+        dataSource.posts = viewModel.posts
+        homeView.postTable.reloadData()
+    }
+    
     // MARK: - Private methods
     private func configureTable() {
         homeView.postTable.dataSource = dataSource
@@ -64,16 +71,16 @@ private extension HomeViewController {
     // MARK: - Posts methods
     func getPosts() {
         SVProgressHUD.show()
-        viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts(_:))
+        viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts)
     }
     
     func errorPosts(_ message: String) {
         SVProgressHUD.dismiss()
     }
     
-    func setPosts(_ posts: [Post]) {
+    func setPosts() {
         SVProgressHUD.dismiss()
-        dataSource.posts = posts
+        dataSource.posts = viewModel.posts
         homeView.postTable.reloadData()
     }
 }

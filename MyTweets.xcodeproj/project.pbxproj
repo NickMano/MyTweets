@@ -37,6 +37,8 @@
 		CA973D6D2687FF7F001FFCA4 /* NewPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA973D6C2687FF7F001FFCA4 /* NewPostView.xib */; };
 		CA973D72268800AA001FFCA4 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D71268800AA001FFCA4 /* NewPostViewController.swift */; };
 		CA973D7A2688038C001FFCA4 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D792688038C001FFCA4 /* NewPostView.swift */; };
+		CA973D7F26880B4C001FFCA4 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */; };
+		CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D8326880C64001FFCA4 /* PostRequest.swift */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
@@ -101,6 +103,8 @@
 		CA973D6C2687FF7F001FFCA4 /* NewPostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostView.xib; sourceTree = "<group>"; };
 		CA973D71268800AA001FFCA4 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		CA973D792688038C001FFCA4 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		CA973D8326880C64001FFCA4 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				CA973D71268800AA001FFCA4 /* NewPostViewController.swift */,
 				CA973D6C2687FF7F001FFCA4 /* NewPostView.xib */,
 				CA973D792688038C001FFCA4 /* NewPostView.swift */,
+				CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */,
+				CA973D8326880C64001FFCA4 /* PostRequest.swift */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
@@ -638,7 +644,9 @@
 				CA2FADE72680001500AC3B29 /* Endpoint.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */,
+				CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */,
 				CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */,
+				CA973D7F26880B4C001FFCA4 /* NewPostViewModel.swift in Sources */,
 				CA2FAE2626800FF500AC3B29 /* HomeViewController.swift in Sources */,
 				CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */,
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,

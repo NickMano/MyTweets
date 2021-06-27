@@ -8,20 +8,30 @@
 import Simple_Networking
 
 protocol HomeViewModelProtocol {
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void)
+    var posts: [Post] { get }
+    
+    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void)
+    func addPost(_ post: Post)
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void) {
+    private(set) var posts: [Post] = []
+    
+    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void) {
         SN.get(endpoint: Endpoint.posts) { (response: SNResultWithEntity<[Post], ErrorResponse>) in
             switch response {
-            case .success(let tweets):
-                succesfulAction(tweets)
+            case .success(let posts):
+                self.posts = posts
+                succesfulAction()
             case .error(let error):
                 errorAction(error.localizedDescription)
             case .errorResult(let error):
                 errorAction(error.error)
             }
         }
+    }
+    
+    func addPost(_ post: Post) {
+        posts.insert(post, at: 0)
     }
 }
