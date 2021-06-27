@@ -40,6 +40,7 @@
 		CA973D7F26880B4C001FFCA4 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */; };
 		CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D8326880C64001FFCA4 /* PostRequest.swift */; };
 		CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D9026892900001FFCA4 /* GeneralResponse.swift */; };
+		CA973D9E26894685001FFCA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		CA973D8326880C64001FFCA4 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		CA973D9026892900001FFCA4 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				CA2FADD4267FEA6100AC3B29 /* Helpers */,
 				CA4A8A6B267664E30058FA7E /* Views */,
 				CAF4A6BD266F8D81001AE431 /* Info.plist */,
+				CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */,
 			);
 			path = MyTweets;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			files = (
 				CAF4A6BC266F8D81001AE431 /* LaunchScreen.storyboard in Resources */,
 				CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */,
+				CA973D9E26894685001FFCA4 /* GoogleService-Info.plist in Resources */,
 				CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */,
 				CA973D6D2687FF7F001FFCA4 /* NewPostView.xib in Resources */,
 				CA2FAE5F2680B88800AC3B29 /* TweetCell.xib in Resources */,
