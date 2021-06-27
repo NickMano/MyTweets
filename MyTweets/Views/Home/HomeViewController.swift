@@ -9,19 +9,19 @@ import UIKit
 import SVProgressHUD
 
 final class HomeViewController: UIViewController {
-    // MARK: - IBOutlets
-    @IBOutlet weak var tableView: UITableView!
-    
     // MARK: - Public properties
     weak var coordinator: HomeCoordinator?
     var dataSource = PostDataSource()
     
     // MARK: - Private properties
     private let viewModel: HomeViewModelProtocol
+    private let homeView: HomeViewProtocol
     
     // MARK: - Initializers
-    init(viewModel: HomeViewModelProtocol = HomeViewModel()) {
+    init(viewModel: HomeViewModelProtocol = HomeViewModel(),
+         view: HomeViewProtocol = HomeView()) {
         self.viewModel = viewModel
+        homeView = view
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,15 +33,30 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
+        configureButtons()
         getPosts()
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = homeView
     }
     
     // MARK: - Private methods
     private func configureTable() {
-        tableView.dataSource = dataSource
+        homeView.postTable.dataSource = dataSource
         
         let nib = UINib(nibName: TweetCell.identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: TweetCell.identifier)
+        homeView.postTable.register(nib, forCellReuseIdentifier: TweetCell.identifier)
+    }
+    
+    private func configureButtons() {
+        homeView.addPostButtonAction(#selector(newPostAction), from: self)
+    }
+    
+    // MARK: - Actions
+    @objc private func newPostAction() {
+        coordinator?.newPost()
     }
 }
 
@@ -59,6 +74,6 @@ private extension HomeViewController {
     func setPosts(_ posts: [Post]) {
         SVProgressHUD.dismiss()
         dataSource.posts = posts
-        tableView.reloadData()
+        homeView.postTable.reloadData()
     }
 }

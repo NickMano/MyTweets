@@ -63,7 +63,7 @@ final class LoginViewController: UIViewController {
 
     // MARK: - Actions
     @objc private func performLogin() {
-        guard !isFormValid(),
+        guard isFormValid(),
               let email = loginView.getEmailValue(),
               let password = loginView.getPasswordValue() else {
             return

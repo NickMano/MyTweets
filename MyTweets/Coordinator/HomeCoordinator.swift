@@ -22,4 +22,15 @@ final class HomeCoordinator: Coordinator {
         
         navigationController.viewControllers = [vc]
     }
+    
+    func newPost() {
+        let vc = NewPostViewController()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .automatic
+        navigationController.present(vc, animated: true)
+    }
+    
+    func cancelPost() {
+        navigationController.dismiss(animated: true)
+    }
 }

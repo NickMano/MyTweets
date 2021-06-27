@@ -8,10 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyTweets" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="MyTweets" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="WDh-ig-AEi" id="94Q-8W-jJL"/>
-                <outlet property="view" destination="iN0-l3-epB" id="Xch-nS-Ig8"/>
+                <outlet property="dataView" destination="kqv-gL-MJq" id="lPB-tC-TWh"/>
+                <outlet property="newPostButton" destination="7Zd-aX-HOz" id="kdH-dw-CX1"/>
+                <outlet property="postsTable" destination="WDh-ig-AEi" id="eoW-MH-ILf"/>
+                <outlet property="stackView" destination="fKQ-g8-aRh" id="Szv-5D-TD4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,25 +21,64 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDh-ig-AEi">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-g8-aRh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-gL-MJq">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDh-ig-AEi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zd-aX-HOz">
+                                    <rect key="frame" x="334" y="772" width="48" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="dXc-GB-aYs"/>
+                                        <constraint firstAttribute="height" constant="48" id="gB6-TG-STM"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="pencil" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7Zd-aX-HOz" secondAttribute="trailing" constant="32" id="Adf-dN-TZw"/>
+                                <constraint firstAttribute="bottom" secondItem="7Zd-aX-HOz" secondAttribute="bottom" constant="32" id="RXM-bW-bUO"/>
+                                <constraint firstAttribute="bottom" secondItem="WDh-ig-AEi" secondAttribute="bottom" id="Twg-1e-WRD"/>
+                                <constraint firstItem="WDh-ig-AEi" firstAttribute="leading" secondItem="kqv-gL-MJq" secondAttribute="leading" id="pc2-y2-m6U"/>
+                                <constraint firstItem="WDh-ig-AEi" firstAttribute="top" secondItem="kqv-gL-MJq" secondAttribute="top" id="w6h-f3-TZ2"/>
+                                <constraint firstAttribute="trailing" secondItem="WDh-ig-AEi" secondAttribute="trailing" id="wsE-pV-aNM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kqv-gL-MJq" firstAttribute="leading" secondItem="fKQ-g8-aRh" secondAttribute="leading" id="LpY-GV-Ywc"/>
+                        <constraint firstAttribute="trailing" secondItem="kqv-gL-MJq" secondAttribute="trailing" id="S2t-xl-lfJ"/>
+                        <constraint firstAttribute="bottom" secondItem="kqv-gL-MJq" secondAttribute="bottom" id="T0f-FQ-CHQ"/>
+                        <constraint firstItem="kqv-gL-MJq" firstAttribute="top" secondItem="fKQ-g8-aRh" secondAttribute="top" id="zch-au-wQD"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WDh-ig-AEi" secondAttribute="trailing" id="8zf-F1-1eY"/>
-                <constraint firstItem="WDh-ig-AEi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HA5-tJ-aVE"/>
-                <constraint firstItem="WDh-ig-AEi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uk6-Cg-AcZ"/>
-                <constraint firstAttribute="bottom" secondItem="WDh-ig-AEi" secondAttribute="bottom" id="UuK-Go-6k0"/>
+                <constraint firstItem="fKQ-g8-aRh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Mqq-C7-D4n"/>
+                <constraint firstItem="fKQ-g8-aRh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RQD-Kd-h0W"/>
+                <constraint firstAttribute="trailing" secondItem="fKQ-g8-aRh" secondAttribute="trailing" id="beF-x1-Bjw"/>
+                <constraint firstAttribute="bottom" secondItem="fKQ-g8-aRh" secondAttribute="bottom" id="oZB-zQ-ZUY"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </view>
     </objects>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -65,11 +65,8 @@ final class RegisterViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func performSignUp() {
-        if !isFormValid() {
-            return
-        }
-        
-        guard let userName = registerView.getUserNameValue(),
+        guard isFormValid(),
+              let userName = registerView.getUserNameValue(),
               let pass = registerView.getPasswordValue(),
               let email = registerView.getEmailValue() else {
             return
