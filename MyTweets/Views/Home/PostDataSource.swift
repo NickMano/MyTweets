@@ -7,10 +7,15 @@
 
 import UIKit
 
-final class PostDataSource: NSObject, UITableViewDataSource {
+final class PostDataSource: NSObject {
+    // MARK: - Private properties
     private let userEmail = UserDefaults.standard.string(forKey: "email") ?? ""
-    var posts: [Post] = []
     
+    // MARK: Public properties
+    var posts: [Post] = []
+}
+
+extension PostDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }

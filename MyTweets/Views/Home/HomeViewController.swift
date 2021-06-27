@@ -12,11 +12,11 @@ import UIKit
 final class HomeViewController: UIViewController {
     // MARK: - Public properties
     weak var coordinator: HomeCoordinator?
-    var tableDataSource = PostDataSource()
     
     // MARK: - Private properties
     private let viewModel: HomeViewModelProtocol
     private let homeView: HomeViewProtocol
+    private var tableDataSource = PostDataSource()
     
     // MARK: - Initializers
     init(viewModel: HomeViewModelProtocol = HomeViewModel(),
