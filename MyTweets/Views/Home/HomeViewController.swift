@@ -5,13 +5,14 @@
 //  Created by Nicolas Manograsso on 20/06/2021.
 //
 
+import NotificationBannerSwift
 import SVProgressHUD
 import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: - Public properties
     weak var coordinator: HomeCoordinator?
-    var dataSource = PostDataSource()
+    var tableDataSource = PostDataSource()
     
     // MARK: - Private properties
     private let viewModel: HomeViewModelProtocol
@@ -22,6 +23,7 @@ final class HomeViewController: UIViewController {
          view: HomeViewProtocol = HomeView()) {
         self.viewModel = viewModel
         homeView = view
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,13 +47,14 @@ final class HomeViewController: UIViewController {
     // MARK: - Public methods
     func updateDataWith(_ post: Post) {
         viewModel.addPost(post)
-        dataSource.posts = viewModel.posts
+        tableDataSource.posts = viewModel.posts
         homeView.postTable.reloadData()
     }
     
     // MARK: - Private methods
     private func configureTable() {
-        homeView.postTable.dataSource = dataSource
+        homeView.postTable.dataSource = tableDataSource
+        homeView.postTable.delegate = self
         
         let nib = UINib(nibName: TweetCell.identifier, bundle: nil)
         homeView.postTable.register(nib, forCellReuseIdentifier: TweetCell.identifier)
@@ -74,13 +77,50 @@ private extension HomeViewController {
         viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts)
     }
     
-    func errorPosts(_ message: String) {
-        SVProgressHUD.dismiss()
-    }
-    
     func setPosts() {
         SVProgressHUD.dismiss()
-        dataSource.posts = viewModel.posts
+        tableDataSource.posts = viewModel.posts
         homeView.postTable.reloadData()
+    }
+    
+    func deletePostAt(_ index: IndexPath) {
+        SVProgressHUD.show()
+        let postId = tableDataSource.posts[index.row].id
+        viewModel.deletePost(postId,
+                             index: index,
+                             errorAction: errorPosts(_:),
+                             succesfulAction: deletePostFromTable(_:))
+    }
+    
+    func deletePostFromTable(_ index: IndexPath) {
+        SVProgressHUD.dismiss()
+        tableDataSource.posts.remove(at: index.row)
+        homeView.postTable.deleteRows(at: [index], with: .fade)
+    }
+    
+    func errorPosts(_ message: String) {
+        SVProgressHUD.dismiss()
+        NotificationBanner(title: "Error",
+                           subtitle: message,
+                           style: .warning).show()
+
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: nil) { [weak self] (_, _, completionHandler) in
+            self?.deletePostAt(indexPath)
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

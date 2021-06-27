@@ -39,6 +39,7 @@
 		CA973D7A2688038C001FFCA4 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D792688038C001FFCA4 /* NewPostView.swift */; };
 		CA973D7F26880B4C001FFCA4 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */; };
 		CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D8326880C64001FFCA4 /* PostRequest.swift */; };
+		CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D9026892900001FFCA4 /* GeneralResponse.swift */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		CA973D792688038C001FFCA4 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		CA973D8326880C64001FFCA4 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		CA973D9026892900001FFCA4 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -174,8 +176,8 @@
 				CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */,
 				CA973D472687F97C001FFCA4 /* HomeView.swift */,
 				CA2FAE2A2680126C00AC3B29 /* HomeView.xib */,
-				CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */,
 				CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */,
+				CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 				CA2FAE682680BEE800AC3B29 /* User */,
 				CA2FAE04268001C100AC3B29 /* ErrorResponse.swift */,
 				CA2FAE692680BF0800AC3B29 /* Post.swift */,
+				CA973D9026892900001FFCA4 /* GeneralResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2FADFD2680018F00AC3B29 /* User.swift in Sources */,
+				CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */,
 				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,

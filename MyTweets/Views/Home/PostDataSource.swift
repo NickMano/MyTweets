@@ -8,6 +8,7 @@
 import UIKit
 
 final class PostDataSource: NSObject, UITableViewDataSource {
+    private let userEmail = UserDefaults.standard.string(forKey: "email") ?? ""
     var posts: [Post] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,13 +18,16 @@ final class PostDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TweetCell.identifier, for: indexPath)
         
-        guard let tweetCell = cell as? TweetCell,
+        guard let postCell = cell as? TweetCell,
               posts.indices.contains(indexPath.row) else {
             return UITableViewCell()
         }
         
-        tweetCell.configureWith(posts[indexPath.row])
-        
-        return tweetCell
+        postCell.configureWith(posts[indexPath.row])
+        return postCell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        posts[indexPath.row].author.email == userEmail
     }
 }

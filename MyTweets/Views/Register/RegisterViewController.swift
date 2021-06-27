@@ -87,6 +87,7 @@ final class RegisterViewController: UIViewController {
                 FormNotification.generic.showError()
             case .success(let user):
                 SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
+                UserDefaults.standard.setValue(email, forKey: "email")
                 self?.coordinator?.home()
             }
         }
