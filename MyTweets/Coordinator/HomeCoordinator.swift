@@ -40,4 +40,15 @@ final class HomeCoordinator: Coordinator {
         vc.updateDataWith(post)
         navigationController.dismiss(animated: true)
     }
+    
+    func openCamera(from vc: UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.cameraFlashMode = .off
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = vc
+        
+        navigationController.present(imagePicker, animated: true, completion: nil)
+    }
 }

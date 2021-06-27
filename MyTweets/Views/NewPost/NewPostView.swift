@@ -10,11 +10,13 @@ import UIKit
 enum NewPostButtons {
     case cancel
     case post
+    case openCamera
 }
 
 protocol NewPostViewProtocol: UIView {
     func addButtonAction(_ action: Selector, for button: NewPostButtons, from vc: UIViewController)
     func getPostText() -> String
+    func setImage(_ image: UIImage)
 }
 
 final class NewPostView: NibView {
@@ -32,6 +34,10 @@ final class NewPostView: NibView {
             textBox.backgroundColor = .lightGray
         }
     }
+    
+    @IBOutlet weak var previewImageView: UIImageView!
+    
+    @IBOutlet weak var openCameraButton: UIButton!
 }
 
 extension NewPostView: NewPostViewProtocol {
@@ -41,8 +47,15 @@ extension NewPostView: NewPostViewProtocol {
             cancelButton.addTarget(vc, action: action, for: .touchUpInside)
         case .post:
             postButton.addTarget(vc, action: action, for: .touchUpInside)
+        case .openCamera:
+            openCameraButton.addTarget(vc, action: action, for: .touchUpInside)
         }
     }
     
     func getPostText() -> String { textBox.text }
+    
+    func setImage(_ image: UIImage) {
+        previewImageView.isHidden = false
+        previewImageView.image = image
+    }
 }

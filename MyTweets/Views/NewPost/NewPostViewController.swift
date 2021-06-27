@@ -44,6 +44,7 @@ private extension NewPostViewController {
     func configureButtons() {
         newPostView.addButtonAction(#selector(cancelAction), for: .cancel, from: self)
         newPostView.addButtonAction(#selector(postAction), for: .post, from: self)
+        newPostView.addButtonAction(#selector(openCameraAction), for: .openCamera, from: self)
     }
     
     func errorPost(_ message: String) {
@@ -59,12 +60,30 @@ private extension NewPostViewController {
 
 @objc private extension NewPostViewController {
     // MARK: - Actions
-    private func cancelAction() {
+    func cancelAction() {
         coordinator?.finishPost()
     }
     
-    private func postAction() {
+    func postAction() {
         SVProgressHUD.show()
         viewModel.savePost(newPostView.getPostText(), errorAction: errorPost(_:), succesfulAction: hasPost(_:))
+    }
+    
+    func openCameraAction() {
+        coordinator?.openCamera(from: self)
+    }
+}
+
+extension NewPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard info.keys.contains(.originalImage),
+              let image = info[.originalImage] as? UIImage else {
+            return
+        }
+        
+        newPostView.setImage(image)
     }
 }
