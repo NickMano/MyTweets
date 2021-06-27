@@ -8,10 +8,7 @@
 import Simple_Networking
 
 protocol HomeViewModelProtocol {
-    var posts: [Post] { get }
-    
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void)
-    func addPost(_ post: Post)
+    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void)
     func deletePost(_ id: String,
                     index: IndexPath,
                     errorAction: @escaping (String) -> Void,
@@ -19,24 +16,17 @@ protocol HomeViewModelProtocol {
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
-    private(set) var posts: [Post] = []
-    
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void) {
-        SN.get(endpoint: Endpoint.posts) { [weak self] (response: SNResultWithEntity<[Post], ErrorResponse>) in
+    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void) {
+        SN.get(endpoint: Endpoint.posts) { (response: SNResultWithEntity<[Post], ErrorResponse>) in
             switch response {
             case .success(let posts):
-                self?.posts = posts
-                succesfulAction()
+                succesfulAction(posts)
             case .error(let error):
                 errorAction(error.localizedDescription)
             case .errorResult(let error):
                 errorAction(error.error)
             }
         }
-    }
-    
-    func addPost(_ post: Post) {
-        posts.insert(post, at: 0)
     }
     
     func deletePost(_ id: String, index: IndexPath,
@@ -46,7 +36,6 @@ final class HomeViewModel: HomeViewModelProtocol {
         SN.delete(endpoint: endpoind) { (response: SNResultWithEntity<GeneralResponse, ErrorResponse>) in
             switch response {
             case .success:
-                self.posts.remove(at: index.row)
                 succesfulAction(index)
             case .error(let error):
                 errorAction(error.localizedDescription)

@@ -46,8 +46,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Public methods
     func updateDataWith(_ post: Post) {
-        viewModel.addPost(post)
-        tableDataSource.posts = viewModel.posts
+        tableDataSource.posts.insert(post, at: 0)
         homeView.postTable.reloadData()
     }
     
@@ -74,12 +73,12 @@ private extension HomeViewController {
     // MARK: - Posts methods
     func getPosts() {
         SVProgressHUD.show()
-        viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts)
+        viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts(_:))
     }
     
-    func setPosts() {
+    func setPosts(_ posts: [Post]) {
         SVProgressHUD.dismiss()
-        tableDataSource.posts = viewModel.posts
+        tableDataSource.posts = posts
         homeView.postTable.reloadData()
     }
     
