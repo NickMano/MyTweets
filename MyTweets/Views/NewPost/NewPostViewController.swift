@@ -66,7 +66,7 @@ private extension NewPostViewController {
     
     func postAction() {
         SVProgressHUD.show()
-        viewModel.savePost(newPostView.getPostText(), errorAction: errorPost(_:), succesfulAction: hasPost(_:))
+        viewModel.savePost(newPostView.getPostText(), onError: errorPost(_:), onSaved: hasPost(_:))
     }
     
     func openCameraAction() {

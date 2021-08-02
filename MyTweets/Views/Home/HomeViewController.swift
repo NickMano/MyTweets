@@ -73,7 +73,7 @@ private extension HomeViewController {
     // MARK: - Posts methods
     func getPosts() {
         SVProgressHUD.show()
-        viewModel.getPosts(errorAction: errorPosts(_:), succesfulAction: setPosts(_:))
+        viewModel.getPosts(onError: errorPosts(_:), onSuccesful: setPosts(_:))
     }
     
     func setPosts(_ posts: [Post]) {
@@ -86,9 +86,9 @@ private extension HomeViewController {
         SVProgressHUD.show()
         let postId = tableDataSource.posts[index.row].id
         viewModel.deletePost(postId,
-                             index: index,
-                             errorAction: errorPosts(_:),
-                             succesfulAction: deletePostFromTable(_:))
+                             withIndex: index,
+                             onError: errorPosts(_:),
+                             onDeleted: deletePostFromTable(_:))
     }
     
     func deletePostFromTable(_ index: IndexPath) {

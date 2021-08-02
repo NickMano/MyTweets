@@ -41,6 +41,11 @@
 		CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D8326880C64001FFCA4 /* PostRequest.swift */; };
 		CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D9026892900001FFCA4 /* GeneralResponse.swift */; };
 		CA973D9E26894685001FFCA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */; };
+		CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145326B8AC9B002651B3 /* UITableViewCellTest.swift */; };
+		CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */; };
+		CAC1145B26B8ADF7002651B3 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145A26B8ADF7002651B3 /* PostRepository.swift */; };
+		CAC1145E26B8AFF3002651B3 /* NewPostRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145D26B8AFF3002651B3 /* NewPostRepositoryMock.swift */; };
+		CAC1146126B8B76E002651B3 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1146026B8B76E002651B3 /* HomeViewModelTest.swift */; };
 		CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */; };
 		CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */; };
 		CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF4A6B8266F8D81001AE431 /* Assets.xcassets */; };
@@ -109,6 +114,11 @@
 		CA973D8326880C64001FFCA4 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		CA973D9026892900001FFCA4 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAC1145326B8AC9B002651B3 /* UITableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellTest.swift; sourceTree = "<group>"; };
+		CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModelTest.swift; sourceTree = "<group>"; };
+		CAC1145A26B8ADF7002651B3 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		CAC1145D26B8AFF3002651B3 /* NewPostRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostRepositoryMock.swift; sourceTree = "<group>"; };
+		CAC1146026B8B76E002651B3 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		CAF4A6AC266F8D80001AE431 /* MyTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +242,7 @@
 		CA4A8A6A267663CF0058FA7E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				CAC1145C26B8AE23002651B3 /* Repository */,
 				CA2FADFB2680018300AC3B29 /* Models */,
 				CAF4A6AF266F8D80001AE431 /* AppDelegate.swift */,
 				CAF4A6B8266F8D81001AE431 /* Assets.xcassets */,
@@ -285,6 +296,56 @@
 			path = NewPost;
 			sourceTree = "<group>";
 		};
+		CAC1145226B8AC83002651B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1145326B8AC9B002651B3 /* UITableViewCellTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAC1145526B8AD46002651B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1145926B8AD6E002651B3 /* Mocks */,
+				CAC1145F26B8B75A002651B3 /* Home */,
+				CAC1145626B8AD50002651B3 /* NewPost */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAC1145626B8AD50002651B3 /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */,
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		CAC1145926B8AD6E002651B3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1145D26B8AFF3002651B3 /* NewPostRepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CAC1145C26B8AE23002651B3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1145A26B8ADF7002651B3 /* PostRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CAC1145F26B8B75A002651B3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1146026B8B76E002651B3 /* HomeViewModelTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		CAF4A6A3266F8D80001AE431 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +386,8 @@
 		CAF4A6C5266F8D82001AE431 /* MyTweetsTests */ = {
 			isa = PBXGroup;
 			children = (
+				CAC1145526B8AD46002651B3 /* Views */,
+				CAC1145226B8AC83002651B3 /* Extensions */,
 				CAF4A6C6266F8D82001AE431 /* MyTweetsTests.swift */,
 				CAF4A6C8266F8D82001AE431 /* Info.plist */,
 			);
@@ -640,6 +703,7 @@
 				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
+				CAC1145B26B8ADF7002651B3 /* PostRepository.swift in Sources */,
 				CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */,
 				CA973D72268800AA001FFCA4 /* NewPostViewController.swift in Sources */,
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
@@ -670,7 +734,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC1145E26B8AFF3002651B3 /* NewPostRepositoryMock.swift in Sources */,
 				CAF4A6C7266F8D82001AE431 /* MyTweetsTests.swift in Sources */,
+				CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */,
+				CAC1146126B8B76E002651B3 /* HomeViewModelTest.swift in Sources */,
+				CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L3YB74AQPU;
 				INFOPLIST_FILE = MyTweets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,6 +921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L3YB74AQPU;
 				INFOPLIST_FILE = MyTweets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
