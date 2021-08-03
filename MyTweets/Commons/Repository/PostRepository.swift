@@ -6,62 +6,59 @@
 //
 
 import Foundation
-import Simple_Networking
+import Alamofire
 
 protocol PostRepositoryType {
     func savePost(_ body: PostRequest,
-                  errorAction: @escaping (String) -> Void,
-                  succesfulAction: @escaping (Post) -> Void)
+                  onError: @escaping (String) -> Void,
+                  onSuccess: @escaping (Post) -> Void)
     
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void)
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void)
     
-    func deletePost(_ id: String, errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void)
+    func deletePost(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void)
 }
 
 final class PostRepository: PostRepositoryType {
     func savePost(_ body: PostRequest,
-                  errorAction: @escaping (String) -> Void,
-                  succesfulAction: @escaping (Post) -> Void) {
+                  onError: @escaping (String) -> Void,
+                  onSuccess: @escaping (Post) -> Void) {
         
-        SN.post(endpoint: Endpoint.posts,
-                model: body) { (response: SNResultWithEntity<Post, ErrorResponse>) in
-            switch response {
-            case .success(let post):
-                succesfulAction(post)
-            case .error(let error):
-                errorAction(error.localizedDescription)
-            case .errorResult(let error):
-                errorAction(error.error)
+        AF.request(Endpoint.posts, method: .post, parameters: body, encoder: JSONParameterEncoder.default)
+            .validate()
+            .responseDecodable(of: Post.self) { response in
+                switch response.result {
+                case .success(let post):
+                    onSuccess(post)
+                case .failure(let error):
+                    onError(error.localizedDescription)
+                }
             }
-        }
     }
     
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void) {
-        SN.get(endpoint: Endpoint.posts) { (response: SNResultWithEntity<[Post], ErrorResponse>) in
-            switch response {
-            case .success(let posts):
-                succesfulAction(posts)
-            case .error(let error):
-                errorAction(error.localizedDescription)
-            case .errorResult(let error):
-                errorAction(error.error)
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
+        AF.request(Endpoint.posts, method: .get)
+            .validate()
+            .responseDecodable(of: [Post].self) { response in
+                switch response.result {
+                case .success(let posts):
+                    onSuccess(posts)
+                case .failure(let error):
+                    onError(error.localizedDescription)
+                }
             }
-        }
     }
     
-    func deletePost(_ id: String,
-                    errorAction: @escaping (String) -> Void,
-                    succesfulAction: @escaping () -> Void) {
-        let endpoind = Endpoint.deletePost + id
-        SN.delete(endpoint: endpoind) { (response: SNResultWithEntity<GeneralResponse, ErrorResponse>) in
-            switch response {
-            case .success:
-                succesfulAction()
-            case .error(let error):
-                errorAction(error.localizedDescription)
-            case .errorResult(let error):
-                errorAction(error.error)
+    func deletePost(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void) {
+        let endpoint = Endpoint.deletePost + id
+        AF.request(endpoint, method: .delete)
+            .validate()
+            .responseDecodable(of: GeneralResponse.self) { response in
+                switch response.result {
+                case .success:
+                    onSuccess()
+                case .failure(let error):
+                    onError(error.localizedDescription)
+                }
             }
-        }
     }
 }

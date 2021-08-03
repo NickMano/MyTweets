@@ -23,7 +23,7 @@ final class NewPostViewModel: NewPostViewModelProtocol {
         
         repository.savePost(request) { errorMessage in
             onError(errorMessage)
-        } succesfulAction: { post in
+        } onSuccess: { post in
             onSaved(post)
         }
     }

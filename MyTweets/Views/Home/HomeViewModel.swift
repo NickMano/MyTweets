@@ -5,10 +5,10 @@
 //  Created by Nicolas Manograsso on 21/06/2021.
 //
 
-import Simple_Networking
+import Foundation
 
 protocol HomeViewModelProtocol {
-    func getPosts(onError: @escaping (String) -> Void, onSuccesful: @escaping ([Post]) -> Void)
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void)
     func deletePost(_ id: String, withIndex: IndexPath,
                     onError: @escaping (String) -> Void,
                     onDeleted: @escaping (IndexPath) -> Void)
@@ -21,11 +21,11 @@ final class HomeViewModel: HomeViewModelProtocol {
         self.repository = repository
     }
     
-    func getPosts(onError: @escaping (String) -> Void, onSuccesful: @escaping ([Post]) -> Void) {
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
         repository.getPosts { errorMessage in
             onError(errorMessage)
-        } succesfulAction: { posts in
-            onSuccesful(posts)
+        } onSuccess: { posts in
+            onSuccess(posts)
         }
     }
     
@@ -34,7 +34,7 @@ final class HomeViewModel: HomeViewModelProtocol {
                     onDeleted: @escaping (IndexPath) -> Void) {
         repository.deletePost(id) { errorMessage in
             onError(errorMessage)
-        } succesfulAction: {
+        } onSuccess: {
             onDeleted(index)
         }
     }

@@ -6,7 +6,7 @@
 //
 
 import NotificationBannerSwift
-import Simple_Networking
+import Alamofire
 import SVProgressHUD
 import UIKit
 
@@ -76,20 +76,19 @@ final class RegisterViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        SN.post(endpoint: Endpoint.register,
-                model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
-            SVProgressHUD.dismiss()
-            
-            switch response {
-            case .errorResult(let error):
-                NotificationBanner(subtitle: error.error, style: .danger).show()
-            case .error:
-                FormNotification.generic.showError()
-            case .success(let user):
-                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
-                UserDefaults.standard.setValue(email, forKey: "email")
-                self?.coordinator?.home()
+        AF.request(Endpoint.register, method: .post, parameters: request, encoder: JSONParameterEncoder.default)
+            .validate()
+            .responseDecodable(of: UserResponse.self) { response in
+                SVProgressHUD.dismiss()
+                
+                switch response.result {
+                case .success(let userResponse):
+//                    SimpleNetworking.setAuthenticationHeader(prefix: "", token: userResponse.token)
+                    UserDefaults.standard.setValue(userResponse.user.email, forKey: "email")
+                    self.coordinator?.home()
+                case .failure(let error):
+                    NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()
+                }
             }
-        }
     }
 }

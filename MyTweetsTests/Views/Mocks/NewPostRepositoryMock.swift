@@ -9,38 +9,34 @@ import Foundation
 @testable import MyTweets
 
 final class PostRepositoryErrorMock: PostRepositoryType {
-    func savePost(_ body: PostRequest,
-                  errorAction: @escaping (String) -> Void,
-                  succesfulAction: @escaping (Post) -> Void) {
-        errorAction("error")
+    func savePost(_ body: PostRequest, onError: @escaping (String) -> Void, onSuccess: @escaping (Post) -> Void) {
+        onError("error")
     }
     
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void) {
-        errorAction("error")
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
+        onError("error")
     }
     
-    func deletePost(_ id: String, errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void) {
-        errorAction("error")
+    func deletePost(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void) {
+        onError("error")
     }
 }
 
 final class PostRepositorySuccesfulMock: PostRepositoryType {
-    func savePost(_ body: PostRequest,
-                  errorAction: @escaping (String) -> Void,
-                  succesfulAction: @escaping (Post) -> Void) {
+    func savePost(_ body: PostRequest, onError: @escaping (String) -> Void, onSuccess: @escaping (Post) -> Void) {
         let user = User(email: "email", names: "names", nickname: "nickname")
         let post = Post(id: "id", author: user, imageUrl: "imageUrl",
                         hasImage: false, text: "text", videoUrl: "videoUrl",
                         hasVideo: false, createdAt: "createdAt")
         
-        succesfulAction(post)
+        onSuccess(post)
     }
     
-    func getPosts(errorAction: @escaping (String) -> Void, succesfulAction: @escaping ([Post]) -> Void) {
-        succesfulAction([])
+    func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
+        onSuccess([])
     }
     
-    func deletePost(_ id: String, errorAction: @escaping (String) -> Void, succesfulAction: @escaping () -> Void) {
-        succesfulAction()
+    func deletePost(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void) {
+        onSuccess()
     }
 }
