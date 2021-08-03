@@ -9,7 +9,7 @@ target 'MyTweets' do
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'KeychainSwift'
   pod 'SVProgressHUD'
-  pod 'Simple-Networking', '~> 0.3.2'
+  pod 'Alamofire', '~> 5.4'
   pod 'Kingfisher', '~> 5.0'
   pod 'Firebase/Storage', '~> 8.0.0'
   pod 'Firebase/Analytics', '~> 8.0.0'
