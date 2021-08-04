@@ -8,34 +8,34 @@
 import XCTest
 @testable import MyTweets
 
-class HomeViewModelTest: XCTestCase {
+final class HomeViewModelTest: XCTestCase {
     func testGetPostsWithError() {
         let sut = HomeViewModel(repository: PostRepositoryErrorMock())
         var onError = false
-        var onSuccesful = false
+        var onSuccess = false
         
         sut.getPosts { _ in
             onError = true
-        } onSuccesful: { _ in
-            onSuccesful = true
+        } onSuccess: { _ in
+            onSuccess = true
         }
        
-        XCTAssertFalse(onSuccesful)
+        XCTAssertFalse(onSuccess)
         XCTAssertTrue(onError)
     }
     
     func testGetPostsSuccesful() {
         let sut = HomeViewModel(repository: PostRepositorySuccesfulMock())
         var onError = false
-        var onSuccesful = false
+        var onSuccess = false
         
         sut.getPosts { _ in
             onError = true
-        } onSuccesful: { _ in
-            onSuccesful = true
+        } onSuccess: { _ in
+            onSuccess = true
         }
         
-        XCTAssertTrue(onSuccesful)
+        XCTAssertTrue(onSuccess)
         XCTAssertFalse(onError)
     }
     

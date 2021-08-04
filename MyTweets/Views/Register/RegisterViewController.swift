@@ -6,20 +6,23 @@
 //
 
 import NotificationBannerSwift
-import Simple_Networking
+import Alamofire
 import SVProgressHUD
 import UIKit
 
 final class RegisterViewController: UIViewController {
     // MARK: - Private properties
     private let registerView: RegisterViewProtocol
+    private let viewModel: RegisterViewModelType
     
     // MARK: - Public properties
     weak var coordinator: MainCoordinator?
     
     // MARK: - Initializer
-    init(view: RegisterViewProtocol = RegisterView()) {
+    init(view: RegisterViewProtocol = RegisterView(),
+         viewModel: RegisterViewModelType = RegisterViewModel()) {
         registerView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -65,31 +68,27 @@ final class RegisterViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func performSignUp() {
-        guard isFormValid(),
-              let userName = registerView.getUserNameValue(),
-              let pass = registerView.getPasswordValue(),
-              let email = registerView.getEmailValue() else {
+        let value = viewModel.isValidForm(userName: registerView.getUserNameValue(),
+                                            password: registerView.getPasswordValue(),
+                                            email: registerView.getEmailValue())
+        
+        if !value.isValid {
+            value.error?.showError()
             return
         }
         
-        let request = RegisterRequest(email: email, password: pass, names: userName)
+        let request = RegisterRequest(email: registerView.getUserNameValue()!,
+                                      password: registerView.getPasswordValue()!,
+                                      names: registerView.getEmailValue()!)
         
         SVProgressHUD.show()
         
-        SN.post(endpoint: Endpoint.register,
-                model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
+        viewModel.register(request) { erorr in
             SVProgressHUD.dismiss()
-            
-            switch response {
-            case .errorResult(let error):
-                NotificationBanner(subtitle: error.error, style: .danger).show()
-            case .error:
-                FormNotification.generic.showError()
-            case .success(let user):
-                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
-                UserDefaults.standard.setValue(email, forKey: "email")
-                self?.coordinator?.home()
-            }
+            NotificationBanner(subtitle: erorr, style: .danger).show()
+        } onSuccess: {
+            SVProgressHUD.dismiss()
+            self.coordinator?.home()
         }
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import NotificationBannerSwift
-import Simple_Networking
+import Alamofire
 import SVProgressHUD
 import UIKit
 
@@ -52,7 +52,7 @@ final class LoginViewController: UIViewController {
             FormNotification.allFields.showError()
             return false
         }
-
+        
         if email.isEmpty || pass.isEmpty {
             FormNotification.someField.showError()
             return false
@@ -60,7 +60,7 @@ final class LoginViewController: UIViewController {
         
         return true
     }
-
+    
     // MARK: - Actions
     @objc private func performLogin() {
         guard isFormValid(),
@@ -73,23 +73,21 @@ final class LoginViewController: UIViewController {
         let request = LoginRequest(email: email, password: password)
         
         SVProgressHUD.show()
-
-        SN.post(endpoint: Endpoint.login,
-                model: request) { [weak self] (response: SNResultWithEntity<UserResponse, ErrorResponse>) in
-            
-            SVProgressHUD.dismiss()
-            
-            switch response {
-            case .errorResult(let error):
-                NotificationBanner(subtitle: error.error, style: .danger).show()
-            case .error:
-                FormNotification.generic.showError()
-            case .success(let user):
-                UserDefaults.standard.setValue(email, forKey: "email")
-                SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
-                self?.coordinator?.home()
+        
+        AF.request(Endpoint.login, method: .post, parameters: request, encoder: JSONParameterEncoder.default)
+            .validate()
+            .responseDecodable(of: UserResponse.self) { response in
+                SVProgressHUD.dismiss()
+                
+                switch response.result {
+                case .success(let userResponse ):
+                    UserDefaults.standard.setValue(userResponse.user.email, forKey: "email")
+                    TokenManager.shared.setToken(userResponse.token)
+                    self.coordinator?.home()
+                case .failure(let error):
+                    NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()
+                }
             }
-        }
     }
 }
 

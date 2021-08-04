@@ -73,7 +73,7 @@ private extension HomeViewController {
     // MARK: - Posts methods
     func getPosts() {
         SVProgressHUD.show()
-        viewModel.getPosts(onError: errorPosts(_:), onSuccesful: setPosts(_:))
+        viewModel.getPosts(onError: errorPosts(_:), onSuccess: setPosts(_:))
     }
     
     func setPosts(_ posts: [Post]) {
