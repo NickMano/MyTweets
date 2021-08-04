@@ -8,7 +8,7 @@
 import XCTest
 @testable import MyTweets
 
-class HomeViewModelTest: XCTestCase {
+final class HomeViewModelTest: XCTestCase {
     func testGetPostsWithError() {
         let sut = HomeViewModel(repository: PostRepositoryErrorMock())
         var onError = false

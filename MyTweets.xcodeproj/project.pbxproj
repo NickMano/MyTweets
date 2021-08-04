@@ -12,6 +12,8 @@
 		C27F6CA600DAEDE865B6E90C /* Pods_MyTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */; };
 		CA16ADFE26BA2EEA003EA01F /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16ADFD26BA2EEA003EA01F /* TokenManager.swift */; };
 		CA16AE0026BA3479003EA01F /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16ADFF26BA3479003EA01F /* UserRepository.swift */; };
+		CA16AE0226BA3690003EA01F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16AE0126BA3690003EA01F /* RegisterViewModel.swift */; };
+		CA16AE0526BA3BBF003EA01F /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA16AE0426BA3BBF003EA01F /* RegisterViewModelTest.swift */; };
 		CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */; };
 		CA2FADCB267F7D7F00AC3B29 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */; };
 		CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FADCF267FE96100AC3B29 /* LoginView.swift */; };
@@ -85,6 +87,10 @@
 		974036769E0C6422DF4BC99B /* Pods-MyTweets-MyTweetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTweets-MyTweetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyTweets-MyTweetsUITests/Pods-MyTweets-MyTweetsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4DC93C281F727129ADCCA78 /* Pods_MyTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DE4B0B553C0F3A1F419E64 /* Pods_MyTweets_MyTweetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTweets_MyTweetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA16ADFD26BA2EEA003EA01F /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		CA16ADFF26BA3479003EA01F /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		CA16AE0126BA3690003EA01F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		CA16AE0426BA3BBF003EA01F /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
 		CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		CA2FADCF267FE96100AC3B29 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -165,6 +171,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA16AE0326BA3BAF003EA01F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA16AE0426BA3BBF003EA01F /* RegisterViewModelTest.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		CA2FADB8267F7B1000AC3B29 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +186,7 @@
 				CA2FADDD267FF98700AC3B29 /* RegisterView.swift */,
 				CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */,
 				CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */,
+				CA16AE0126BA3690003EA01F /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -310,6 +325,7 @@
 		CAC1145526B8AD46002651B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA16AE0326BA3BAF003EA01F /* Register */,
 				CAC1145926B8AD6E002651B3 /* Mocks */,
 				CAC1145F26B8B75A002651B3 /* Home */,
 				CAC1145626B8AD50002651B3 /* NewPost */,
@@ -705,6 +721,7 @@
 				CA2FADFD2680018F00AC3B29 /* User.swift in Sources */,
 				CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */,
 				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
+				CA16AE0226BA3690003EA01F /* RegisterViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
 				CAC1145B26B8ADF7002651B3 /* PostRepository.swift in Sources */,
@@ -741,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAC1145E26B8AFF3002651B3 /* NewPostRepositoryMock.swift in Sources */,
+				CA16AE0526BA3BBF003EA01F /* RegisterViewModelTest.swift in Sources */,
 				CAF4A6C7266F8D82001AE431 /* MyTweetsTests.swift in Sources */,
 				CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */,
 				CAC1146126B8B76E002651B3 /* HomeViewModelTest.swift in Sources */,
