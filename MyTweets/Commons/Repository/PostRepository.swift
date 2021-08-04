@@ -24,7 +24,8 @@ final class PostRepository: PostRepositoryType {
                   onSuccess: @escaping (Post) -> Void) {
         
         let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
-        AF.request(Endpoint.posts, method: .post, parameters: body, encoder: JSONParameterEncoder.default, headers: header)
+        AF.request(Endpoint.posts, method: .post, parameters: body,
+                   encoder: JSONParameterEncoder.default, headers: header)
             .validate()
             .responseDecodable(of: Post.self) { response in
                 switch response.result {
