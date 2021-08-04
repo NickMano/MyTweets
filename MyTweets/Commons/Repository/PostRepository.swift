@@ -23,7 +23,8 @@ final class PostRepository: PostRepositoryType {
                   onError: @escaping (String) -> Void,
                   onSuccess: @escaping (Post) -> Void) {
         
-        AF.request(Endpoint.posts, method: .post, parameters: body, encoder: JSONParameterEncoder.default)
+        let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
+        AF.request(Endpoint.posts, method: .post, parameters: body, encoder: JSONParameterEncoder.default, headers: header)
             .validate()
             .responseDecodable(of: Post.self) { response in
                 switch response.result {
@@ -36,7 +37,8 @@ final class PostRepository: PostRepositoryType {
     }
     
     func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
-        AF.request(Endpoint.posts, method: .get)
+        let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
+        AF.request(Endpoint.posts, method: .get, headers: header)
             .validate()
             .responseDecodable(of: [Post].self) { response in
                 switch response.result {
@@ -49,8 +51,9 @@ final class PostRepository: PostRepositoryType {
     }
     
     func deletePost(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void) {
+        let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
         let endpoint = Endpoint.deletePost + id
-        AF.request(endpoint, method: .delete)
+        AF.request(endpoint, method: .delete, headers: header)
             .validate()
             .responseDecodable(of: GeneralResponse.self) { response in
                 switch response.result {

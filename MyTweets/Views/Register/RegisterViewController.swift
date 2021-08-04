@@ -83,8 +83,8 @@ final class RegisterViewController: UIViewController {
                 
                 switch response.result {
                 case .success(let userResponse):
-//                    SimpleNetworking.setAuthenticationHeader(prefix: "", token: userResponse.token)
                     UserDefaults.standard.setValue(userResponse.user.email, forKey: "email")
+                    TokenManager.shared.setToken(userResponse.token)
                     self.coordinator?.home()
                 case .failure(let error):
                     NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()

@@ -52,7 +52,7 @@ final class LoginViewController: UIViewController {
             FormNotification.allFields.showError()
             return false
         }
-
+        
         if email.isEmpty || pass.isEmpty {
             FormNotification.someField.showError()
             return false
@@ -60,7 +60,7 @@ final class LoginViewController: UIViewController {
         
         return true
     }
-
+    
     // MARK: - Actions
     @objc private func performLogin() {
         guard isFormValid(),
@@ -82,12 +82,11 @@ final class LoginViewController: UIViewController {
                 switch response.result {
                 case .success(let userResponse ):
                     UserDefaults.standard.setValue(userResponse.user.email, forKey: "email")
-//                    SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
+                    TokenManager.shared.setToken(userResponse.token)
                     self.coordinator?.home()
                 case .failure(let error):
                     NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()
                 }
-
             }
     }
 }
