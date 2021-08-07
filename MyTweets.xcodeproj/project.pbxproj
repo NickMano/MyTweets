@@ -495,7 +495,6 @@
 				CAF4A6A9266F8D80001AE431 /* Frameworks */,
 				CAF4A6AA266F8D80001AE431 /* Resources */,
 				B5EB04A8ED49B8393700DF4C /* [CP] Embed Pods Frameworks */,
-				CA973D402687F4A7001FFCA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -720,23 +719,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTweets/Pods-MyTweets-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		CA973D402687F4A7001FFCA4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1035,7 +1017,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E7D49F534D99E8F7F82D4C3 /* Pods-MyTweets-MyTweetsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyTweetsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1055,7 +1037,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 974036769E0C6422DF4BC99B /* Pods-MyTweets-MyTweetsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyTweetsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

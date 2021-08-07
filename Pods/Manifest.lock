@@ -113,6 +113,7 @@ PODS:
   - PromisesObjC (1.2.12)
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
+  - SwiftLint (0.43.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
@@ -123,6 +124,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - NotificationBannerSwift (~> 3.0.0)
   - SVProgressHUD
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -146,6 +148,7 @@ SPEC REPOS:
     - PromisesObjC
     - SnapKit
     - SVProgressHUD
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -168,7 +171,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 2ded1c9f6243b4e7d07922c0260eb135e5b8c512
+PODFILE CHECKSUM: 651090f099908556971268aef73787a91ac6ac80
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

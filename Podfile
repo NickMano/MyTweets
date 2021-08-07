@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '14.0'
+platform :ios, '13.0'
 
 target 'MyTweets' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -14,6 +13,7 @@ target 'MyTweets' do
   pod 'Firebase/Storage', '~> 8.0.0'
   pod 'Firebase/Analytics', '~> 8.0.0'
   pod 'FirebaseCrashlytics', '~> 8.0.0'
+  pod 'SwiftLint'
 
   target 'MyTweetsTests' do
     inherit! :search_paths
