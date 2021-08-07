@@ -62,4 +62,38 @@ final class RegisterViewModelTest: XCTestCase {
         XCTAssertFalse(value.isValid)
         XCTAssertEqual(value.error, .generic)
     }
+    
+    func testGetPostsWithError() {
+        let sut = RegisterViewModel(repository: UserRepositoryErrorMock())
+        let request = RegisterRequest(email: "email", password: "pass", names: "user")
+        
+        var onError = false
+        var onSuccess = false
+        
+        sut.register(request) {_ in
+            onError = true
+        } onSuccess: {
+            onSuccess = true
+        }
+       
+        XCTAssertFalse(onSuccess)
+        XCTAssertTrue(onError)
+    }
+    
+    func testGetPostsSuccesful() {
+        let sut = RegisterViewModel(repository: UserRepositorySuccesfulMock())
+        let request = RegisterRequest(email: "email", password: "pass", names: "user")
+        
+        var onError = false
+        var onSuccess = false
+        
+        sut.register(request) { _ in
+            onError = true
+        } onSuccess: {
+            onSuccess = true
+        }
+        
+        XCTAssertTrue(onSuccess)
+        XCTAssertFalse(onError)
+    }
 }

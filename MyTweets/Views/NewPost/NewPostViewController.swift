@@ -37,24 +37,12 @@ final class NewPostViewController: UIViewController {
     override func loadView() {
         view = newPostView
     }
-}
 
-private extension NewPostViewController {
     // MARK: - Private methods
-    func configureButtons() {
+    private func configureButtons() {
         newPostView.addButtonAction(#selector(cancelAction), for: .cancel, from: self)
         newPostView.addButtonAction(#selector(postAction), for: .post, from: self)
         newPostView.addButtonAction(#selector(openCameraAction), for: .openCamera, from: self)
-    }
-    
-    func errorPost(_ message: String) {
-        SVProgressHUD.dismiss()
-        NotificationBanner(subtitle: message, style: .danger).show()
-    }
-    
-    func hasPost(_ post: Post) {
-        SVProgressHUD.dismiss()
-        coordinator?.finishPost(post)
     }
 }
 
@@ -66,7 +54,13 @@ private extension NewPostViewController {
     
     func postAction() {
         SVProgressHUD.show()
-        viewModel.savePost(newPostView.getPostText(), onError: errorPost(_:), onSaved: hasPost(_:))
+        viewModel.savePost(newPostView.getPostText()) { message in
+            SVProgressHUD.dismiss()
+            NotificationBanner(subtitle: message, style: .danger).show()
+        } onSaved: { [weak self] post in
+            SVProgressHUD.dismiss()
+            self?.coordinator?.finishPost(post)
+        }
     }
     
     func openCameraAction() {

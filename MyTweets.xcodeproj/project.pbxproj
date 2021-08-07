@@ -58,6 +58,7 @@
 		CAF4A6D2266F8D82001AE431 /* MyTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6D1266F8D82001AE431 /* MyTweetsUITests.swift */; };
 		CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6EF266F92F0001AE431 /* Coordinator.swift */; };
 		CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */; };
+		D0554E4D26BEF06F00CE7908 /* UserRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		CAF4A6D3266F8D82001AE431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF4A6EF266F92F0001AE431 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				CA16AE0326BA3BAF003EA01F /* Register */,
-				CAC1145926B8AD6E002651B3 /* Mocks */,
 				CAC1145F26B8B75A002651B3 /* Home */,
 				CAC1145626B8AD50002651B3 /* NewPost */,
 			);
@@ -336,6 +337,7 @@
 		CAC1145626B8AD50002651B3 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				CAC1145926B8AD6E002651B3 /* Mocks */,
 				CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */,
 			);
 			path = NewPost;
@@ -406,6 +408,7 @@
 		CAF4A6C5266F8D82001AE431 /* MyTweetsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0554E4926BEF03D00CE7908 /* Commons */,
 				CAC1145526B8AD46002651B3 /* Views */,
 				CAC1145226B8AC83002651B3 /* Extensions */,
 				CAF4A6C6266F8D82001AE431 /* MyTweetsTests.swift */,
@@ -431,6 +434,30 @@
 				CA2FAE2026800F6A00AC3B29 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D0554E4926BEF03D00CE7908 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				D0554E4A26BEF04700CE7908 /* Repository */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		D0554E4A26BEF04700CE7908 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D0554E4B26BEF04F00CE7908 /* Mocks */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D0554E4B26BEF04F00CE7908 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D54418462F4FB9C1CC2D8D4A /* Pods */ = {
@@ -762,6 +789,7 @@
 				CAF4A6C7266F8D82001AE431 /* MyTweetsTests.swift in Sources */,
 				CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */,
 				CAC1146126B8B76E002651B3 /* HomeViewModelTest.swift in Sources */,
+				D0554E4D26BEF06F00CE7908 /* UserRepositoryMock.swift in Sources */,
 				CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

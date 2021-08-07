@@ -114,8 +114,7 @@ extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive,
-                                              title: nil) { [weak self] (_, _, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { [weak self] (_, _, completionHandler) in
             self?.deletePostAt(indexPath)
             completionHandler(true)
         }
