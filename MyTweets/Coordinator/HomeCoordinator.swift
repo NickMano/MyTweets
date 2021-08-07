@@ -18,8 +18,9 @@ final class HomeCoordinator: Coordinator {
     func start() {
         let vc = HomeViewController()
         vc.coordinator = self
-        vc.title = "Home"
+        vc.title = "Discover"
         
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [vc]
     }
     

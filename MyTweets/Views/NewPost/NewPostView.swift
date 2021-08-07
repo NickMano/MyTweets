@@ -31,7 +31,6 @@ final class NewPostView: NibView {
     @IBOutlet weak var textBox: UITextView! {
         didSet {
             textBox.layer.cornerRadius = 8
-            textBox.backgroundColor = .lightGray
         }
     }
     

@@ -13,7 +13,11 @@ final class TweetCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var tweeetImageView: UIImageView!
+    @IBOutlet weak var tweetImageView: UIImageView! {
+        didSet {
+            tweetImageView.layer.cornerRadius = 8
+        }
+    }
     @IBOutlet weak var videoButton: UIButton!
     
     func configureWith(_ post: Post) {
@@ -22,9 +26,9 @@ final class TweetCell: UITableViewCell {
         messageLabel.text = post.text
         
         if post.hasImage {
-            tweeetImageView.kf.setImage(with: URL(string: post.imageUrl))
+            tweetImageView.kf.setImage(with: URL(string: post.imageUrl))
         } else {
-            tweeetImageView.isHidden = true
+            tweetImageView.isHidden = true
         }
         
         if post.hasVideo {
