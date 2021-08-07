@@ -18,6 +18,7 @@ target 'MyTweets' do
   target 'MyTweetsTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'SnapshotTesting', '~> 1.9.0'
   end
 
   target 'MyTweetsUITests' do
