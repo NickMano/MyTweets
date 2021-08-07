@@ -59,6 +59,8 @@
 		CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6EF266F92F0001AE431 /* Coordinator.swift */; };
 		CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */; };
 		D0554E4D26BEF06F00CE7908 /* UserRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */; };
+		D0554E4F26BEFB7600CE7908 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E4E26BEFB7600CE7908 /* LoginViewModel.swift */; };
+		D0554E5226BF001900CE7908 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5126BF001900CE7908 /* LoginViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		CAF4A6EF266F92F0001AE431 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CAF4A6F4266F931B001AE431 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryMock.swift; sourceTree = "<group>"; };
+		D0554E4E26BEFB7600CE7908 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D0554E5126BF001900CE7908 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +304,7 @@
 				CA2FADCF267FE96100AC3B29 /* LoginView.swift */,
 				CA8882C526783F9000784928 /* LoginView.xib */,
 				CA2FADF12680011600AC3B29 /* LoginRequest.swift */,
+				D0554E4E26BEFB7600CE7908 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 		CAC1145526B8AD46002651B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D0554E5026BEFFFD00CE7908 /* Login */,
 				CA16AE0326BA3BAF003EA01F /* Register */,
 				CAC1145F26B8B75A002651B3 /* Home */,
 				CAC1145626B8AD50002651B3 /* NewPost */,
@@ -458,6 +464,14 @@
 				D0554E4C26BEF06F00CE7908 /* UserRepositoryMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D0554E5026BEFFFD00CE7908 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0554E5126BF001900CE7908 /* LoginViewModelTest.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D54418462F4FB9C1CC2D8D4A /* Pods */ = {
@@ -729,6 +743,7 @@
 			files = (
 				CA2FADFD2680018F00AC3B29 /* User.swift in Sources */,
 				CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */,
+				D0554E4F26BEFB7600CE7908 /* LoginViewModel.swift in Sources */,
 				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
 				CA16AE0226BA3690003EA01F /* RegisterViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
@@ -770,6 +785,7 @@
 				CA16AE0526BA3BBF003EA01F /* RegisterViewModelTest.swift in Sources */,
 				CAF4A6C7266F8D82001AE431 /* MyTweetsTests.swift in Sources */,
 				CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */,
+				D0554E5226BF001900CE7908 /* LoginViewModelTest.swift in Sources */,
 				CAC1146126B8B76E002651B3 /* HomeViewModelTest.swift in Sources */,
 				D0554E4D26BEF06F00CE7908 /* UserRepositoryMock.swift in Sources */,
 				CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */,

@@ -13,13 +13,16 @@ import UIKit
 final class LoginViewController: UIViewController {
     // MARK: - Private properties
     private let loginView: LoginViewProtocol
+    private let viewModel: LoginViewModelType
     
     // MARK: - Public properties
     weak var coordinator: MainCoordinator?
     
     // MARK: - Initializer
-    init(view: LoginViewProtocol = LoginView()) {
+    init(view: LoginViewProtocol = LoginView(),
+         viewModel: LoginViewModelType = LoginViewModel()) {
         loginView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,52 +45,29 @@ final class LoginViewController: UIViewController {
         loginView.setLoginButtonAction(#selector(performLogin), viewController: self)
     }
     
-    private func isFormValid() -> Bool {
-        guard let email = loginView.getEmailValue(), let pass = loginView.getPasswordValue() else {
-            FormNotification.generic.showError()
-            return false
-        }
-        
-        if email.isEmpty && pass.isEmpty {
-            FormNotification.allFields.showError()
-            return false
-        }
-        
-        if email.isEmpty || pass.isEmpty {
-            FormNotification.someField.showError()
-            return false
-        }
-        
-        return true
-    }
-    
     // MARK: - Actions
     @objc private func performLogin() {
-        guard isFormValid(),
-              let email = loginView.getEmailValue(),
-              let password = loginView.getPasswordValue() else {
+        let email = loginView.getEmailValue()
+        let password = loginView.getPasswordValue()
+        let form = viewModel.isValidForm(password: password, email: email)
+        
+        if !form.isValid {
+            form.error?.showError()
             return
         }
         
         // A valid user is email: test@test.com password: qwerty
-        let request = LoginRequest(email: email, password: password)
+        let request = LoginRequest(email: email!, password: password!)
         
         SVProgressHUD.show()
         
-        AF.request(Endpoint.login, method: .post, parameters: request, encoder: JSONParameterEncoder.default)
-            .validate()
-            .responseDecodable(of: UserResponse.self) { response in
-                SVProgressHUD.dismiss()
-                
-                switch response.result {
-                case .success(let userResponse ):
-                    UserDefaults.standard.setValue(userResponse.user.email, forKey: "email")
-                    TokenManager.shared.setToken(userResponse.token)
-                    self.coordinator?.home()
-                case .failure(let error):
-                    NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()
-                }
-            }
+        viewModel.login(request) { error in
+            SVProgressHUD.dismiss()
+            NotificationBanner(subtitle: error, style: .danger).show()
+        } onSuccess: { [weak self] in
+            SVProgressHUD.dismiss()
+            self?.coordinator?.home()
+        }
     }
 }
 

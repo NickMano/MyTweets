@@ -45,50 +45,30 @@ final class RegisterViewController: UIViewController {
         registerView.setSignUpButtonAction(#selector(performSignUp), viewController: self)
     }
     
-    private func isFormValid() -> Bool {
-        guard let userName = registerView.getUserNameValue(),
-              let pass = registerView.getPasswordValue(),
-              let email = registerView.getEmailValue() else {
-            FormNotification.generic.showError()
-            return false
-        }
-        
-        if userName.isEmpty && pass.isEmpty && email.isEmpty {
-            FormNotification.allFields.showError()
-            return false
-        }
-        
-        if userName.isEmpty || pass.isEmpty || email.isEmpty {
-            FormNotification.someField.showError()
-            return false
-        }
-        
-        return true
-    }
-    
     // MARK: - Actions
     @objc private func performSignUp() {
-        let value = viewModel.isValidForm(userName: registerView.getUserNameValue(),
-                                            password: registerView.getPasswordValue(),
-                                            email: registerView.getEmailValue())
+        let username = registerView.getUserNameValue()
+        let email = registerView.getEmailValue()
+        let password = registerView.getPasswordValue()
+        let form = viewModel.isValidForm(userName: username,
+                                            password: password,
+                                            email: email)
         
-        if !value.isValid {
-            value.error?.showError()
+        if !form.isValid {
+            form.error?.showError()
             return
         }
         
-        let request = RegisterRequest(email: registerView.getUserNameValue()!,
-                                      password: registerView.getPasswordValue()!,
-                                      names: registerView.getEmailValue()!)
+        let request = RegisterRequest(email: email!, password: password!, names: username!)
         
         SVProgressHUD.show()
         
         viewModel.register(request) { erorr in
             SVProgressHUD.dismiss()
             NotificationBanner(subtitle: erorr, style: .danger).show()
-        } onSuccess: {
+        } onSuccess: { [weak self] in
             SVProgressHUD.dismiss()
-            self.coordinator?.home()
+            self?.coordinator?.home()
         }
     }
 }
