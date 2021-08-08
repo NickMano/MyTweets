@@ -205,11 +205,11 @@
 		CA2FADB8267F7B1000AC3B29 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */,
-				CA2FADDD267FF98700AC3B29 /* RegisterView.swift */,
 				CA2FADCA267F7D7F00AC3B29 /* RegisterView.xib */,
-				CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */,
+				CA2FADDD267FF98700AC3B29 /* RegisterView.swift */,
+				CA2FADC5267F7D3E00AC3B29 /* RegisterViewController.swift */,
 				CA16AE0126BA3690003EA01F /* RegisterViewModel.swift */,
+				CA2FAE2F2680169400AC3B29 /* RegisterRequest.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 		CA2FADE5267FFE1700AC3B29 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */,
-				CA973D472687F97C001FFCA4 /* HomeView.swift */,
 				CA2FAE2A2680126C00AC3B29 /* HomeView.xib */,
+				CA973D472687F97C001FFCA4 /* HomeView.swift */,
+				CA2FAE2526800FF500AC3B29 /* HomeViewController.swift */,
 				CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */,
 				CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */,
 			);
@@ -310,8 +310,8 @@
 		CA4A8A6C267664EF0058FA7E /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */,
 				CA4A8A70267665640058FA7E /* WelcomeView.xib */,
+				CAF4A6B3266F8D80001AE431 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -319,11 +319,11 @@
 		CA8B50F326782C4B00978109 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CA8B50F426782C6000978109 /* LoginViewController.swift */,
-				CA2FADCF267FE96100AC3B29 /* LoginView.swift */,
 				CA8882C526783F9000784928 /* LoginView.xib */,
-				CA2FADF12680011600AC3B29 /* LoginRequest.swift */,
+				CA2FADCF267FE96100AC3B29 /* LoginView.swift */,
+				CA8B50F426782C6000978109 /* LoginViewController.swift */,
 				D0554E4E26BEFB7600CE7908 /* LoginViewModel.swift */,
+				CA2FADF12680011600AC3B29 /* LoginRequest.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -331,9 +331,9 @@
 		CA973D6B2687FF51001FFCA4 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
-				CA973D71268800AA001FFCA4 /* NewPostViewController.swift */,
 				CA973D6C2687FF7F001FFCA4 /* NewPostView.xib */,
 				CA973D792688038C001FFCA4 /* NewPostView.swift */,
+				CA973D71268800AA001FFCA4 /* NewPostViewController.swift */,
 				CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */,
 				CA973D8326880C64001FFCA4 /* PostRequest.swift */,
 			);
