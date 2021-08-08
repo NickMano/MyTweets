@@ -8,6 +8,13 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
+    // MARK: - IBOutlets
+    @IBOutlet weak var loginButton: UIButton! {
+        didSet {
+            loginButton.addShadow()
+        }
+    }
+    
     // MARK: - Public properties
     weak var coordinator: MainCoordinator?
     
