@@ -10,6 +10,12 @@ import SnapshotTesting
 @testable import MyTweets
 
 class HomeViewControllerTest: XCTestCase {
+    func testInitWithCoder() {
+        expectFatalError(expectedMessage: "init(coder:) has not been implemented") {
+            _ = HomeViewController(coder: NSCoder())
+        }
+    }
+    
     func testView() {
         let repository = PostRepositorySuccesfulMock()
         repository.setNumberOfPosts(10)

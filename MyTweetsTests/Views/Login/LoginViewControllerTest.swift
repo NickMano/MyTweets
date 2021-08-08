@@ -10,6 +10,12 @@ import SnapshotTesting
 @testable import MyTweets
 
 class LoginViewControllerTest: XCTestCase {
+    func testInitWithCoder() {
+        expectFatalError(expectedMessage: "init(coder:) has not been implemented") {
+            _ = LoginViewController(coder: NSCoder())
+        }
+    }
+    
     func testView() {
         let viewController = LoginViewController()
         

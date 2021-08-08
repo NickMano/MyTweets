@@ -66,6 +66,8 @@
 		D0554E5F26BF490900CE7908 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */; };
 		D0554E6126BF586900CE7908 /* NewPostViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */; };
 		D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6226C022E300CE7908 /* UIView+Utils.swift */; };
+		D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */; };
+		D0554E6C26C04EEC00CE7908 /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,8 @@
 		D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E6226C022E300CE7908 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FatalError.swift"; sourceTree = "<group>"; };
+		D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 		CA2FADD4267FEA6100AC3B29 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */,
 				CA2FADD5267FEA8F00AC3B29 /* NibView.swift */,
 				CA16ADFD26BA2EEA003EA01F /* TokenManager.swift */,
 			);
@@ -424,6 +429,7 @@
 				CAC1145526B8AD46002651B3 /* Views */,
 				CAC1145226B8AC83002651B3 /* Extensions */,
 				CAF4A6C8266F8D82001AE431 /* Info.plist */,
+				D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */,
 			);
 			path = MyTweetsTests;
 			sourceTree = "<group>";
@@ -783,6 +789,7 @@
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
 				CAC1145B26B8ADF7002651B3 /* PostRepository.swift in Sources */,
 				CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */,
+				D0554E6C26C04EEC00CE7908 /* FatalErrorUtil.swift in Sources */,
 				CA16ADFE26BA2EEA003EA01F /* TokenManager.swift in Sources */,
 				CA973D72268800AA001FFCA4 /* NewPostViewController.swift in Sources */,
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
@@ -827,6 +834,7 @@
 				D0554E4D26BEF06F00CE7908 /* UserRepositoryMock.swift in Sources */,
 				D0554E5F26BF490900CE7908 /* LoginViewControllerTest.swift in Sources */,
 				CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */,
+				D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,12 @@ import SnapshotTesting
 @testable import MyTweets
 
 class RegisterViewControllerTest: XCTestCase {
+    func testInitWithCoder() {
+        expectFatalError(expectedMessage: "init(coder:) has not been implemented") {
+            _ = RegisterViewController(coder: NSCoder())
+        }
+    }
+    
     func testView() {
         let viewController = RegisterViewController()
         

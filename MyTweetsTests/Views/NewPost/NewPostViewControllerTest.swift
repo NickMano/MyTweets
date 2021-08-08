@@ -10,6 +10,12 @@ import SnapshotTesting
 @testable import MyTweets
 
 class NewPostViewControllerTest: XCTestCase {
+    func testInitWithCoder() {
+        expectFatalError(expectedMessage: "init(coder:) has not been implemented") {
+            _ = NewPostViewController(coder: NSCoder())
+        }
+    }
+    
     func testView() {
         let viewController = NewPostViewController()
         
