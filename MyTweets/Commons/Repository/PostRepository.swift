@@ -10,7 +10,7 @@ import Alamofire
 
 protocol PostRepositoryType {
     func savePost(_ body: PostRequest,
-                  onError: @escaping (String) -> Void,
+                  onError: @escaping (Error) -> Void,
                   onSuccess: @escaping (Post) -> Void)
     
     func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void)
@@ -20,7 +20,7 @@ protocol PostRepositoryType {
 
 final class PostRepository: PostRepositoryType {
     func savePost(_ body: PostRequest,
-                  onError: @escaping (String) -> Void,
+                  onError: @escaping (Error) -> Void,
                   onSuccess: @escaping (Post) -> Void) {
         
         let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
@@ -32,7 +32,7 @@ final class PostRepository: PostRepositoryType {
                 case .success(let post):
                     onSuccess(post)
                 case .failure(let error):
-                    onError(error.localizedDescription)
+                    onError(error)
                 }
             }
     }

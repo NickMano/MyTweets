@@ -14,12 +14,15 @@ class NewPostViewModelTest: XCTestCase {
         var onError = false
         var onSaved = false
         
-        sut.savePost("") { _ in
-            onError = true
-        } onSaved: { _ in
-            onSaved = true
+        sut.savePost("", imageUrl: nil) { result in
+            switch result {
+            case .failure(_):
+                onError = true
+            case .success(_):
+                onSaved = true
+            }
         }
-       
+        
         XCTAssertFalse(onSaved)
         XCTAssertTrue(onError)
     }
@@ -29,10 +32,13 @@ class NewPostViewModelTest: XCTestCase {
         var onError = false
         var onSaved = false
         
-        sut.savePost("") { _ in
-            onError = true
-        } onSaved: { _ in
-            onSaved = true
+        sut.savePost("", imageUrl: nil) { result in
+            switch result {
+            case .failure(_):
+                onError = true
+            case .success(_):
+                onSaved = true
+            }
         }
        
         XCTAssertTrue(onSaved)

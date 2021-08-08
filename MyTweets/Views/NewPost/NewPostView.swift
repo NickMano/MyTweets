@@ -17,6 +17,7 @@ protocol NewPostViewProtocol: UIView {
     func addButtonAction(_ action: Selector, for button: NewPostButtons, from vc: UIViewController)
     func getPostText() -> String
     func setImage(_ image: UIImage)
+    func getImage() -> UIImage?
 }
 
 final class NewPostView: NibView {
@@ -52,6 +53,8 @@ extension NewPostView: NewPostViewProtocol {
     }
     
     func getPostText() -> String { textBox.text }
+    
+    func getImage() -> UIImage? { previewImageView.image }
     
     func setImage(_ image: UIImage) {
         previewImageView.isHidden = false

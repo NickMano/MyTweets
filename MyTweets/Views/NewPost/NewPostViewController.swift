@@ -54,12 +54,20 @@ final class NewPostViewController: UIViewController {
     
     func postAction() {
         SVProgressHUD.show()
-        viewModel.savePost(newPostView.getPostText()) { message in
+        var imageUrl: String?
+        
+        viewModel.uploadPhotoToFirebase(previewImage: newPostView.getImage()) { url in
+            imageUrl = url
+        }
+        
+        viewModel.savePost(newPostView.getPostText(), imageUrl: imageUrl) { [weak self] result in
             SVProgressHUD.dismiss()
-            NotificationBanner(subtitle: message, style: .danger).show()
-        } onSaved: { [weak self] post in
-            SVProgressHUD.dismiss()
-            self?.coordinator?.finishPost(post)
+            switch result {
+            case .failure(let error):
+                NotificationBanner(subtitle: error.localizedDescription, style: .danger).show()
+            case .success(let post):
+                self?.coordinator?.finishPost(post)
+            }
         }
     }
     

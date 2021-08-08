@@ -9,8 +9,8 @@ import Foundation
 @testable import MyTweets
 
 final class PostRepositoryErrorMock: PostRepositoryType {
-    func savePost(_ body: PostRequest, onError: @escaping (String) -> Void, onSuccess: @escaping (Post) -> Void) {
-        onError("error")
+    func savePost(_ body: PostRequest, onError: @escaping (Error) -> Void, onSuccess: @escaping (Post) -> Void) {
+        onError(PostError.badUrl)
     }
     
     func getPosts(onError: @escaping (String) -> Void, onSuccess: @escaping ([Post]) -> Void) {
@@ -45,7 +45,7 @@ final class PostRepositorySuccesfulMock: PostRepositoryType {
         }
     }
     
-    func savePost(_ body: PostRequest, onError: @escaping (String) -> Void, onSuccess: @escaping (Post) -> Void) {
+    func savePost(_ body: PostRequest, onError: @escaping (Error) -> Void, onSuccess: @escaping (Post) -> Void) {
         onSuccess(post)
     }
     
