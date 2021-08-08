@@ -13,8 +13,8 @@ class WelcomeViewControllertTest: XCTestCase {
     func testView() {
         let viewController = WelcomeViewController()
         
-        assertSnapshot(matching: viewController, as: .image(on: .iPhone8), record: true)
-        assertSnapshot(matching: viewController, as: .image(on: .iPhone8Plus), record: true)
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX), record: true)
+        assertSnapshot(matching: viewController, as: .image(on: .iPhone8))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhone8Plus))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
     }
 }
