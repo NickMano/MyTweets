@@ -7,12 +7,16 @@
 
 import NotificationBannerSwift
 import SVProgressHUD
+import CoreLocation
 import UIKit
 
 final class NewPostViewController: UIViewController {
     // MARK: - Private properties
     private let viewModel: NewPostViewModelProtocol
     private let newPostView: NewPostViewProtocol
+    private let locationDelegate = NewPostLocationDelegate()
+    
+    private var locationManager: CLLocationManager?
     
     // MARK: - Public properties
     weak var coordinator: HomeCoordinator?
@@ -32,6 +36,7 @@ final class NewPostViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         configureButtons()
+        requestLocation()
     }
     
     override func loadView() {
@@ -44,6 +49,17 @@ final class NewPostViewController: UIViewController {
         newPostView.addButtonAction(#selector(postAction), for: .post, from: self)
         newPostView.addButtonAction(#selector(openCameraAction), for: .openCamera, from: self)
     }
+    
+    private func requestLocation() {
+        guard CLLocationManager.locationServicesEnabled() else {
+            return
+        }
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = locationDelegate
+        locationManager?.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager?.requestAlwaysAuthorization()
+    }
 }
 
 @objc private extension NewPostViewController {
@@ -54,12 +70,19 @@ final class NewPostViewController: UIViewController {
     
     func postAction() {
         SVProgressHUD.show()
-        var imageUrl: String?
         
-        viewModel.uploadPhotoToFirebase(previewImage: newPostView.getImage()) { url in
-            imageUrl = url
+        if let image = newPostView.getImage(){
+            viewModel.uploadPhotoToFirebase(image) { [weak self] imageUrl in
+                self?.savePost(imageUrl: imageUrl)
+            }
+            
+            return
         }
         
+        savePost()
+    }
+    
+    func savePost(imageUrl: String? = nil) {
         viewModel.savePost(newPostView.getPostText(), imageUrl: imageUrl) { [weak self] result in
             SVProgressHUD.dismiss()
             switch result {

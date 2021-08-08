@@ -10,7 +10,7 @@ import FirebaseStorage
 
 protocol NewPostViewModelProtocol {
     func savePost(_ text: String, imageUrl: String?, onCompletion: @escaping (Result<Post, Error>) -> Void)
-    func uploadPhotoToFirebase(previewImage: UIImage?, onCompletion: @escaping (String?) -> Void)
+    func uploadPhotoToFirebase(_ image: UIImage, onCompletion: @escaping (String?) -> Void)
 }
 
 final class NewPostViewModel: NewPostViewModelProtocol {
@@ -30,9 +30,8 @@ final class NewPostViewModel: NewPostViewModelProtocol {
         }
     }
     
-    func uploadPhotoToFirebase(previewImage: UIImage?, onCompletion: @escaping (String?) -> Void) {
-        guard let imageToSaved = previewImage,
-              let imageData = imageToSaved.jpegData(compressionQuality: 0.1) else {
+    func uploadPhotoToFirebase(_ image: UIImage, onCompletion: @escaping (String?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.1) else {
             onCompletion(nil)
             return
         }

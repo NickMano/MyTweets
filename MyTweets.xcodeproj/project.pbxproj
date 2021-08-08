@@ -69,6 +69,7 @@
 		D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */; };
 		D0554E6C26C04EEC00CE7908 /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */; };
 		D0554E6F26C0506900CE7908 /* TokenManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */; };
+		D0554E7126C0914B00CE7908 /* NewPostLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FatalError.swift"; sourceTree = "<group>"; };
 		D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
 		D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerTest.swift; sourceTree = "<group>"; };
+		D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostLocationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 				CA973D71268800AA001FFCA4 /* NewPostViewController.swift */,
 				CA973D7E26880B4C001FFCA4 /* NewPostViewModel.swift */,
 				CA973D8326880C64001FFCA4 /* PostRequest.swift */,
+				D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */,
 				D0554E4F26BEFB7600CE7908 /* LoginViewModel.swift in Sources */,
 				CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */,
+				D0554E7126C0914B00CE7908 /* NewPostLocationDelegate.swift in Sources */,
 				CA16AE0226BA3690003EA01F /* RegisterViewModel.swift in Sources */,
 				CA2FADDE267FF98700AC3B29 /* RegisterView.swift in Sources */,
 				CA2FAE2126800F6A00AC3B29 /* HomeCoordinator.swift in Sources */,
