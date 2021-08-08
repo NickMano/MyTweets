@@ -25,7 +25,7 @@ final class NewPostView: NibView {
     
     @IBOutlet weak var postButton: UIButton! {
         didSet {
-            postButton.layer.cornerRadius = 14
+            postButton.addShadow(cornerRadius: 14)
         }
     }
     
@@ -37,7 +37,11 @@ final class NewPostView: NibView {
     
     @IBOutlet weak var previewImageView: UIImageView!
     
-    @IBOutlet weak var openCameraButton: UIButton!
+    @IBOutlet weak var openCameraButton: UIButton! {
+        didSet {
+            openCameraButton.addShadow()
+        }
+    }
 }
 
 extension NewPostView: NewPostViewProtocol {

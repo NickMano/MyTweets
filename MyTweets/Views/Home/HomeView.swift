@@ -19,7 +19,7 @@ final class HomeView: NibView {
     @IBOutlet weak var postsTable: UITableView!
     @IBOutlet weak var newPostButton: UIButton! {
         didSet {
-            newPostButton.layer.cornerRadius = 24
+            newPostButton.addShadow(cornerRadius: 24)
         }
     }
 }
