@@ -68,6 +68,7 @@
 		D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6226C022E300CE7908 /* UIView+Utils.swift */; };
 		D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */; };
 		D0554E6C26C04EEC00CE7908 /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */; };
+		D0554E6F26C0506900CE7908 /* TokenManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 		D0554E6226C022E300CE7908 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FatalError.swift"; sourceTree = "<group>"; };
 		D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
+		D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,8 +428,9 @@
 			isa = PBXGroup;
 			children = (
 				D0554E4926BEF03D00CE7908 /* Commons */,
-				CAC1145526B8AD46002651B3 /* Views */,
 				CAC1145226B8AC83002651B3 /* Extensions */,
+				D0554E6D26C0503300CE7908 /* Helpers */,
+				CAC1145526B8AD46002651B3 /* Views */,
 				CAF4A6C8266F8D82001AE431 /* Info.plist */,
 				D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */,
 			);
@@ -493,6 +496,14 @@
 				D0554E5626BF3CDC00CE7908 /* WelcomeViewControllertTest.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		D0554E6D26C0503300CE7908 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D54418462F4FB9C1CC2D8D4A /* Pods */ = {
@@ -835,6 +846,7 @@
 				D0554E5F26BF490900CE7908 /* LoginViewControllerTest.swift in Sources */,
 				CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */,
 				D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */,
+				D0554E6F26C0506900CE7908 /* TokenManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
