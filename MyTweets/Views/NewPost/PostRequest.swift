@@ -10,3 +10,8 @@ struct PostRequest: Codable {
     let imageUrl: String?
     let videoUrl: String?
 }
+
+struct PostRequestLocation: Codable {
+    let latitude: Double
+    let longitude: Double
+}

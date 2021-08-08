@@ -9,12 +9,14 @@ import XCTest
 @testable import MyTweets
 
 class NewPostViewModelTest: XCTestCase {
+    let postData = PostRequest(text: "", imageUrl: nil, videoUrl: nil)
+    
     func testSavePostWithError() {
         let sut = NewPostViewModel(repository: PostRepositoryErrorMock())
         var onError = false
         var onSaved = false
         
-        sut.savePost("", imageUrl: nil) { result in
+        sut.savePost(postData) { result in
             switch result {
             case .failure(_):
                 onError = true
@@ -32,7 +34,7 @@ class NewPostViewModelTest: XCTestCase {
         var onError = false
         var onSaved = false
         
-        sut.savePost("", imageUrl: nil) { result in
+        sut.savePost(postData) { result in
             switch result {
             case .failure(_):
                 onError = true

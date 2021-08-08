@@ -83,7 +83,9 @@ final class NewPostViewController: UIViewController {
     }
     
     func savePost(imageUrl: String? = nil) {
-        viewModel.savePost(newPostView.getPostText(), imageUrl: imageUrl) { [weak self] result in
+        let postData = PostRequest(text: newPostView.getPostText(), imageUrl: imageUrl, videoUrl: nil)
+        
+        viewModel.savePost(postData) { [weak self] result in
             SVProgressHUD.dismiss()
             switch result {
             case .failure(let error):

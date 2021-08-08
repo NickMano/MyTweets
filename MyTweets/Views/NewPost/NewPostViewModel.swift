@@ -9,7 +9,7 @@ import UIKit
 import FirebaseStorage
 
 protocol NewPostViewModelProtocol {
-    func savePost(_ text: String, imageUrl: String?, onCompletion: @escaping (Result<Post, Error>) -> Void)
+    func savePost(_ postData: PostRequest, onCompletion: @escaping (Result<Post, Error>) -> Void)
     func uploadPhotoToFirebase(_ image: UIImage, onCompletion: @escaping (String?) -> Void)
 }
 
@@ -20,10 +20,8 @@ final class NewPostViewModel: NewPostViewModelProtocol {
         self.repository = repository
     }
     
-    func savePost(_ text: String, imageUrl: String?, onCompletion: @escaping (Result<Post, Error>) -> Void) {
-        let request = PostRequest(text: text, imageUrl: imageUrl, videoUrl: nil)
-        
-        repository.savePost(request) { error in
+    func savePost(_ postData: PostRequest, onCompletion: @escaping (Result<Post, Error>) -> Void) {
+        repository.savePost(postData) { error in
             onCompletion(.failure(error))
         } onSuccess: { post in
             onCompletion(.success(post))
