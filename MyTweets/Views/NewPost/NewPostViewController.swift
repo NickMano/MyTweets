@@ -58,7 +58,8 @@ final class NewPostViewController: UIViewController {
         locationManager = CLLocationManager()
         locationManager?.delegate = locationDelegate
         locationManager?.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationManager?.requestAlwaysAuthorization()
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startMonitoringSignificantLocationChanges()
     }
 }
 
