@@ -30,7 +30,7 @@ final class PostRepositorySuccesfulMock: PostRepositoryType {
     
     init() {
         post = Post(id: "id", author: user, imageUrl: "imageUrl",
-                    hasImage: false, text: "text", videoUrl: "videoUrl",
+                    hasImage: true, text: "text", videoUrl: "videoUrl",
                     hasVideo: false, createdAt: "createdAt")
     }
     

@@ -31,7 +31,7 @@
 		CA2FAE5F2680B88800AC3B29 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2FAE5E2680B88800AC3B29 /* TweetCell.xib */; };
 		CA2FAE642680BD2200AC3B29 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE632680BD2200AC3B29 /* TweetCell.swift */; };
 		CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE692680BF0800AC3B29 /* Post.swift */; };
-		CA2FAE732680C38900AC3B29 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE722680C38900AC3B29 /* UITableViewCell.swift */; };
+		CA2FAE732680C38900AC3B29 /* UITableViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE722680C38900AC3B29 /* UITableViewCell+Utils.swift */; };
 		CA2FAE7B2680C74800AC3B29 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */; };
 		CA2FAE9B2680D0EA00AC3B29 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */; };
 		CA4A8A71267665640058FA7E /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4A8A70267665640058FA7E /* WelcomeView.xib */; };
@@ -65,6 +65,7 @@
 		D0554E5D26BF407B00CE7908 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5C26BF407B00CE7908 /* HomeViewControllerTest.swift */; };
 		D0554E5F26BF490900CE7908 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */; };
 		D0554E6126BF586900CE7908 /* NewPostViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */; };
+		D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6226C022E300CE7908 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +116,7 @@
 		CA2FAE5E2680B88800AC3B29 /* TweetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
 		CA2FAE632680BD2200AC3B29 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		CA2FAE692680BF0800AC3B29 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		CA2FAE722680C38900AC3B29 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		CA2FAE722680C38900AC3B29 /* UITableViewCell+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Utils.swift"; sourceTree = "<group>"; };
 		CA2FAE7A2680C74800AC3B29 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		CA2FAE9A2680D0EA00AC3B29 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA4A8A70267665640058FA7E /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		D0554E5C26BF407B00CE7908 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewControllerTest.swift; sourceTree = "<group>"; };
+		D0554E6226C022E300CE7908 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +269,8 @@
 		CA2FAE712680C35000AC3B29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CA2FAE722680C38900AC3B29 /* UITableViewCell.swift */,
+				CA2FAE722680C38900AC3B29 /* UITableViewCell+Utils.swift */,
+				D0554E6226C022E300CE7908 /* UIView+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -783,7 +786,7 @@
 				CA16ADFE26BA2EEA003EA01F /* TokenManager.swift in Sources */,
 				CA973D72268800AA001FFCA4 /* NewPostViewController.swift in Sources */,
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
-				CA2FAE732680C38900AC3B29 /* UITableViewCell.swift in Sources */,
+				CA2FAE732680C38900AC3B29 /* UITableViewCell+Utils.swift in Sources */,
 				CA2FADF72680014E00AC3B29 /* UserResponse.swift in Sources */,
 				CA973D7A2688038C001FFCA4 /* NewPostView.swift in Sources */,
 				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
@@ -801,6 +804,7 @@
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
 				CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */,
+				D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */,
 				CA2FADF22680011600AC3B29 /* LoginRequest.swift in Sources */,
 				CA973D482687F97C001FFCA4 /* HomeView.swift in Sources */,
 				CA2FAE05268001C100AC3B29 /* ErrorResponse.swift in Sources */,

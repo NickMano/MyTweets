@@ -1,5 +1,5 @@
 //
-//  UITableViewCell.swift
+//  UITableViewCell+Utils.swift
 //  MyTweets
 //
 //  Created by Nicolas Manograsso on 21/06/2021.
