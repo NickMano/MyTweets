@@ -20,8 +20,14 @@ final class HomeCoordinator: Coordinator {
         vc.coordinator = self
         vc.title = "Discover"
         
+        let map = UIBarButtonItem()
+        map.image = UIImage(systemName: "map")
+        map.tintColor = .black
+        
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [vc]
+        
+        navigationController.navigationBar.topItem?.rightBarButtonItem = map
     }
     
     func newPost() {
