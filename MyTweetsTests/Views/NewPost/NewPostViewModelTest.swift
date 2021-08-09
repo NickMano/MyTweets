@@ -9,7 +9,7 @@ import XCTest
 @testable import MyTweets
 
 class NewPostViewModelTest: XCTestCase {
-    let postData = PostRequest(text: "", imageUrl: nil, videoUrl: nil)
+    let postData = PostRequest(text: "", imageUrl: nil, videoUrl: nil, location: nil)
     
     func testSavePostWithError() {
         let sut = NewPostViewModel(repository: PostRepositoryErrorMock())

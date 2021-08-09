@@ -84,7 +84,16 @@ final class NewPostViewController: UIViewController {
     }
     
     func savePost(imageUrl: String? = nil) {
-        let postData = PostRequest(text: newPostView.getPostText(), imageUrl: imageUrl, videoUrl: nil)
+        var location: PostRequestLocation?
+        
+        if let userLocation = locationDelegate.userLocation {
+            let coordinate = userLocation.coordinate
+            location = .init(latitude: coordinate.latitude,
+                             longitude: coordinate.longitude)
+        }
+        
+        let postData = PostRequest(text: newPostView.getPostText(), imageUrl: imageUrl,
+                                   videoUrl: nil, location: location)
         
         viewModel.savePost(postData) { [weak self] result in
             SVProgressHUD.dismiss()
