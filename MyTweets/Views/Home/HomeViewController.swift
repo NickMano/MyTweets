@@ -44,6 +44,11 @@ final class HomeViewController: UIViewController {
         view = homeView
     }
     
+    // MARK: - Computed properties
+    var posts: [Post] {
+        tableDataSource.posts
+    }
+    
     // MARK: - Public methods
     func updateDataWith(_ post: Post) {
         tableDataSource.posts.insert(post, at: 0)

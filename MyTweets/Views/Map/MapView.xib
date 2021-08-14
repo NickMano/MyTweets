@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapView" customModule="MyTweets" customModuleProvider="target">
+            <connections>
+                <outlet property="mapContainer" destination="gnj-4a-4gr" id="1YE-La-q6g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnj-4a-4gr" userLabel="mapContainer">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gnj-4a-4gr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JeI-1o-jHu"/>
+                <constraint firstItem="gnj-4a-4gr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Xve-Nb-jgk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gnj-4a-4gr" secondAttribute="bottom" id="g84-K9-6NL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gnj-4a-4gr" secondAttribute="trailing" id="n6U-KR-rCr"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

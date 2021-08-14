@@ -20,8 +20,10 @@ final class HomeCoordinator: Coordinator {
         vc.coordinator = self
         vc.title = "Discover"
         
-        let map = UIBarButtonItem()
-        map.image = UIImage(systemName: "map")
+        let map = UIBarButtonItem(image: UIImage(systemName: "map"),
+                                  style: .plain,
+                                  target: self,
+                                  action: #selector(self.map))
         map.tintColor = .black
         
         navigationController.navigationBar.prefersLargeTitles = true
@@ -57,5 +59,23 @@ final class HomeCoordinator: Coordinator {
         imagePicker.delegate = vc
         
         navigationController.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @objc func map() {
+        let topViewController = navigationController.topViewController as? HomeViewController
+        var vc : MapViewController
+        
+        if let homeViewController = topViewController {
+            let posts = homeViewController.posts
+            vc = MapViewController(posts: posts)
+        } else {
+            vc = MapViewController()
+        }
+        
+        vc.coordinator = self
+        vc.title = "Map"
+        
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.pushViewController(vc, animated: true)
     }
 }

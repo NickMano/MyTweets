@@ -45,6 +45,9 @@
 		CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D8326880C64001FFCA4 /* PostRequest.swift */; };
 		CA973D9126892900001FFCA4 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA973D9026892900001FFCA4 /* GeneralResponse.swift */; };
 		CA973D9E26894685001FFCA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */; };
+		CAB1AACC26C83868008AC3F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1AACB26C83868008AC3F9 /* MapViewController.swift */; };
+		CAB1AACE26C8395E008AC3F9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB1AACD26C8395E008AC3F9 /* MapView.xib */; };
+		CAB1AAD026C83982008AC3F9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1AACF26C83982008AC3F9 /* MapView.swift */; };
 		CAC1145426B8AC9B002651B3 /* UITableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145326B8AC9B002651B3 /* UITableViewCellTest.swift */; };
 		CAC1145826B8AD64002651B3 /* NewPostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */; };
 		CAC1145B26B8ADF7002651B3 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1145A26B8ADF7002651B3 /* PostRepository.swift */; };
@@ -134,6 +137,9 @@
 		CA973D8326880C64001FFCA4 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		CA973D9026892900001FFCA4 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		CA973D9D26894685001FFCA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAB1AACB26C83868008AC3F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CAB1AACD26C8395E008AC3F9 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		CAB1AACF26C83982008AC3F9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CAC1145326B8AC9B002651B3 /* UITableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellTest.swift; sourceTree = "<group>"; };
 		CAC1145726B8AD64002651B3 /* NewPostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModelTest.swift; sourceTree = "<group>"; };
 		CAC1145A26B8ADF7002651B3 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 				CA2FADB8267F7B1000AC3B29 /* Register */,
 				CA2FADE5267FFE1700AC3B29 /* Home */,
 				CA973D6B2687FF51001FFCA4 /* NewPost */,
+				CAB1AACA26C8384E008AC3F9 /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +348,16 @@
 				D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */,
 			);
 			path = NewPost;
+			sourceTree = "<group>";
+		};
+		CAB1AACA26C8384E008AC3F9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CAB1AACD26C8395E008AC3F9 /* MapView.xib */,
+				CAB1AACF26C83982008AC3F9 /* MapView.swift */,
+				CAB1AACB26C83868008AC3F9 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CAC1145226B8AC83002651B3 /* Extensions */ = {
@@ -650,6 +667,7 @@
 				CA8882C626783F9000784928 /* LoginView.xib in Resources */,
 				CAF4A6B9266F8D81001AE431 /* Assets.xcassets in Resources */,
 				CA2FAE2B2680126C00AC3B29 /* HomeView.xib in Resources */,
+				CAB1AACE26C8395E008AC3F9 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +827,7 @@
 				CA973D72268800AA001FFCA4 /* NewPostViewController.swift in Sources */,
 				CAF4A6F0266F92F0001AE431 /* Coordinator.swift in Sources */,
 				CA2FAE732680C38900AC3B29 /* UITableViewCell+Utils.swift in Sources */,
+				CAB1AAD026C83982008AC3F9 /* MapView.swift in Sources */,
 				CA2FADF72680014E00AC3B29 /* UserResponse.swift in Sources */,
 				CA973D7A2688038C001FFCA4 /* NewPostView.swift in Sources */,
 				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
@@ -821,6 +840,7 @@
 				CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */,
 				CA2FADC6267F7D3E00AC3B29 /* RegisterViewController.swift in Sources */,
 				CA973D7F26880B4C001FFCA4 /* NewPostViewModel.swift in Sources */,
+				CAB1AACC26C83868008AC3F9 /* MapViewController.swift in Sources */,
 				CA2FAE2626800FF500AC3B29 /* HomeViewController.swift in Sources */,
 				CA2FAE302680169400AC3B29 /* RegisterRequest.swift in Sources */,
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
