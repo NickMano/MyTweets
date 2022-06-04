@@ -22,6 +22,8 @@ final class LoginViewController: UIViewController {
     init(view: LoginViewProtocol = LoginView(),
          viewModel: LoginViewModelType = LoginViewModel()) {
         loginView = view
+        loginView.setupView()
+        
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

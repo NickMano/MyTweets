@@ -16,10 +16,23 @@ protocol RegisterViewProtocol: UIView {
 }
 
 final class RegisterView: NibView {
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var emailTextField: UIThemeTextField!
+    @IBOutlet weak var userNameTextField: UIThemeTextField!
+    @IBOutlet weak var passwordTextField: UIThemeTextField!
+    @IBOutlet weak var signUpButton: UIButton! {
+        didSet {
+            signUpButton.setTitleColor(.label, for: .normal)
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        backgroundColor = .primaryColor
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension RegisterView: RegisterViewProtocol {

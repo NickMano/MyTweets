@@ -24,12 +24,13 @@ final class HomeCoordinator: Coordinator {
                                   style: .plain,
                                   target: self,
                                   action: #selector(self.map))
-        map.tintColor = .black
+        map.tintColor = .label
         
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [vc]
         
         navigationController.navigationBar.topItem?.rightBarButtonItem = map
+        navigationController.navigationBar.backgroundColor = .primaryColor
     }
     
     func newPost() {

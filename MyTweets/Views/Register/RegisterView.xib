@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,23 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SzR-9f-feW">
-                    <rect key="frame" x="0.0" y="773" width="414" height="123"/>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-cN-hb1">
                     <rect key="frame" x="40" y="331" width="334" height="234"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-Nq-zS6" userLabel="Email">
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF1-Nq-zS6" userLabel="Email" customClass="UIThemeTextField" customModule="MyTweets" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8V-CX-Uh1">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8V-CX-Uh1" customClass="UIThemeTextField" customModule="MyTweets" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="66" width="334" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-HR-75H">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-HR-75H" customClass="UIThemeTextField" customModule="MyTweets" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="132" width="334" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -51,24 +48,25 @@
                         </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="registerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SzR-9f-feW">
+                    <rect key="frame" x="0.0" y="650" width="414" height="246"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fDC-cN-hb1" secondAttribute="trailing" constant="40" id="2Vt-E9-QCb"/>
                 <constraint firstItem="SzR-9f-feW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="a7C-JB-V68"/>
+                <constraint firstItem="SzR-9f-feW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fDC-cN-hb1" secondAttribute="bottom" constant="40" id="dCD-JC-QzB"/>
                 <constraint firstAttribute="bottom" secondItem="SzR-9f-feW" secondAttribute="bottom" id="eJ8-UN-z0Z"/>
                 <constraint firstItem="fDC-cN-hb1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="p5y-VX-z1c"/>
                 <constraint firstItem="SzR-9f-feW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="sVI-8y-y2A"/>
                 <constraint firstItem="fDC-cN-hb1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wJP-vv-7Uy"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="129"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </view>
     </objects>
     <resources>
-        <image name="registerBackground" width="351.5" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="registerBackground" width="703" height="246"/>
     </resources>
 </document>

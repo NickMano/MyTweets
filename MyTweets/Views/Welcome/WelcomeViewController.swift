@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import WolmoCore
 
 final class WelcomeViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
-            loginButton.addShadow()
+            loginButton.backgroundColor = .none
+            loginButton.setTitleColor(.white, for: .normal)
+            loginButton.layer.borderColor = UIColor.white.cgColor
+            loginButton.layer.borderWidth = 1
+            loginButton.addShadow(color: UIColor.label.cgColor)
         }
     }
     

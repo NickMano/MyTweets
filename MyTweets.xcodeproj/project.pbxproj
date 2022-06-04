@@ -68,11 +68,12 @@
 		D0554E5D26BF407B00CE7908 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5C26BF407B00CE7908 /* HomeViewControllerTest.swift */; };
 		D0554E5F26BF490900CE7908 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */; };
 		D0554E6126BF586900CE7908 /* NewPostViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */; };
-		D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6226C022E300CE7908 /* UIView+Utils.swift */; };
 		D0554E6926C04E1200CE7908 /* XCTestCase+FatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */; };
 		D0554E6C26C04EEC00CE7908 /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */; };
 		D0554E6F26C0506900CE7908 /* TokenManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */; };
 		D0554E7126C0914B00CE7908 /* NewPostLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */; };
+		D079DD962820084B00DA1D11 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079DD952820084B00DA1D11 /* UIColor.swift */; };
+		D08A526228498AD200012B04 /* UIThemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A526128498AD200012B04 /* UIThemeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,11 +167,12 @@
 		D0554E5C26BF407B00CE7908 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E5E26BF490900CE7908 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		D0554E6026BF586900CE7908 /* NewPostViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewControllerTest.swift; sourceTree = "<group>"; };
-		D0554E6226C022E300CE7908 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D0554E6826C04E1200CE7908 /* XCTestCase+FatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FatalError.swift"; sourceTree = "<group>"; };
 		D0554E6A26C04E4000CE7908 /* FatalErrorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorUtil.swift; sourceTree = "<group>"; };
 		D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerTest.swift; sourceTree = "<group>"; };
 		D0554E7026C0914B00CE7908 /* NewPostLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostLocationDelegate.swift; sourceTree = "<group>"; };
+		D079DD952820084B00DA1D11 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D08A526128498AD200012B04 /* UIThemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIThemeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2FAE5D2680B86A00AC3B29 /* TweetCell */,
+				D08A526128498AD200012B04 /* UIThemeTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2FAE722680C38900AC3B29 /* UITableViewCell+Utils.swift */,
-				D0554E6226C022E300CE7908 /* UIView+Utils.swift */,
+				D079DD952820084B00DA1D11 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,7 +314,7 @@
 				CA2FADB8267F7B1000AC3B29 /* Register */,
 				CA2FADE5267FFE1700AC3B29 /* Home */,
 				CA973D6B2687FF51001FFCA4 /* NewPost */,
-				CAB1AACA26C8384E008AC3F9 /* Map */,
+				D0554E7226C0B79600CE7908 /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -524,6 +527,13 @@
 				D0554E6E26C0506900CE7908 /* TokenManagerTest.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0554E7226C0B79600CE7908 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		D54418462F4FB9C1CC2D8D4A /* Pods */ = {
@@ -833,8 +843,10 @@
 				CA2FADD0267FE96100AC3B29 /* LoginView.swift in Sources */,
 				CAF4A6B4266F8D80001AE431 /* WelcomeViewController.swift in Sources */,
 				CA2FAE7B2680C74800AC3B29 /* PostDataSource.swift in Sources */,
+				D08A526228498AD200012B04 /* UIThemeTextField.swift in Sources */,
 				CA16AE0026BA3479003EA01F /* UserRepository.swift in Sources */,
 				CA2FADE72680001500AC3B29 /* Endpoint.swift in Sources */,
+				D079DD962820084B00DA1D11 /* UIColor.swift in Sources */,
 				CAF4A6B0266F8D80001AE431 /* AppDelegate.swift in Sources */,
 				CA2FADD6267FEA8F00AC3B29 /* NibView.swift in Sources */,
 				CA973D8426880C64001FFCA4 /* PostRequest.swift in Sources */,
@@ -846,7 +858,6 @@
 				CA8B50F526782C6000978109 /* LoginViewController.swift in Sources */,
 				CAF4A6F5266F931B001AE431 /* MainCoordinator.swift in Sources */,
 				CA2FAE6A2680BF0800AC3B29 /* Post.swift in Sources */,
-				D0554E6326C022E300CE7908 /* UIView+Utils.swift in Sources */,
 				CA2FADF22680011600AC3B29 /* LoginRequest.swift in Sources */,
 				CA973D482687F97C001FFCA4 /* HomeView.swift in Sources */,
 				CA2FAE05268001C100AC3B29 /* ErrorResponse.swift in Sources */,

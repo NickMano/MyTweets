@@ -14,7 +14,8 @@ final class TweetCell: UITableViewCell {
         didSet {
             contentCellView.layer.masksToBounds = true
             contentCellView.addShadow()
-            
+            contentCellView.backgroundColor = .secondaryColor
+            backgroundColor = .homeBackground
         }
     }
     @IBOutlet weak var nameLabel: UILabel!

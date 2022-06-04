@@ -21,6 +21,12 @@ protocol NewPostViewProtocol: UIView {
 }
 
 final class NewPostView: NibView {
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.backgroundColor = .primaryColor
+        }
+    }
+    
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBOutlet weak var postButton: UIButton! {
@@ -32,6 +38,7 @@ final class NewPostView: NibView {
     @IBOutlet weak var textBox: UITextView! {
         didSet {
             textBox.layer.cornerRadius = 8
+            textBox.backgroundColor = .inputBackground
         }
     }
     
