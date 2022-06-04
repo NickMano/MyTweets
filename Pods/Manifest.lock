@@ -115,6 +115,7 @@ PODS:
   - SnapshotTesting (1.9.0)
   - SVProgressHUD (2.2.5)
   - SwiftLint (0.43.1)
+  - WolmoCore (6.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
@@ -127,6 +128,7 @@ DEPENDENCIES:
   - SnapshotTesting (~> 1.9.0)
   - SVProgressHUD
   - SwiftLint
+  - WolmoCore
 
 SPEC REPOS:
   trunk:
@@ -152,6 +154,7 @@ SPEC REPOS:
     - SnapshotTesting
     - SVProgressHUD
     - SwiftLint
+    - WolmoCore
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -176,7 +179,8 @@ SPEC CHECKSUMS:
   SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  WolmoCore: 4fd7643bc03d1e47316bba77eb157d2904003415
 
-PODFILE CHECKSUM: cc3f2bdf1c4133995eb92561e4b0d4e5e075b705
+PODFILE CHECKSUM: c14049f9510d648cf901e4c44f245ed33dd766ff
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

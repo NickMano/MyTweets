@@ -14,6 +14,7 @@ target 'MyTweets' do
   pod 'Firebase/Analytics', '~> 8.0.0'
   pod 'FirebaseCrashlytics', '~> 8.0.0'
   pod 'SwiftLint'
+  pod 'WolmoCore'
 
   target 'MyTweetsTests' do
     inherit! :search_paths

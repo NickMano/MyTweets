@@ -1,0 +1,6 @@
+framework module WolmoCore {
+  umbrella header "WolmoCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
